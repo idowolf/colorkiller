@@ -19,6 +19,8 @@ public class MainMenu : MonoBehaviour {
     // change scene when "new Game" is pressed
     public void StartGame()
     {
+        Debug.Log("Hello");
+
         SceneManager.LoadScene(sceneName);
     }
 }
