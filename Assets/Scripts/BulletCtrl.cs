@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BulletCtrl : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class BulletCtrl : MonoBehaviour
     public float xFinger;
     public float yFinger;
     SpriteRenderer ren;
+    public string sceneName;
     // Use this for initialization
     void Start()
     {
@@ -40,8 +42,6 @@ public class BulletCtrl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(ren.color);
-        Debug.Log("Hello!");
         if (other.gameObject.name.Equals("pink"))
         {
             ren.color = new Color(1f, 0f, 0.502f); // pink
@@ -51,9 +51,9 @@ public class BulletCtrl : MonoBehaviour
         {
             ren.color = new Color(0.549f, 0.075f, 0.984f); // purple
             gameObject.name = "purple";
-        }
-        if (other.gameObject.name.Equals("turkiz"))
-        {
+	}
+        if (other.gameObject.name.Equals("turkiz")) 
+	{
             ren.color = new Color(0.208f, 0.886f, 0.953f, 1.000f); // turkiz
             gameObject.name = "turkiz";
         }
@@ -61,12 +61,9 @@ public class BulletCtrl : MonoBehaviour
         {
             ren.color = new Color(0.965f, 0.875f, 0.055f, 1.000f); // yellow
             gameObject.name = "yellow";
-        }
-
-
-
-
-
+	}
+        if (other.gameObject.name.Equals("StartGameButton"))
+            SceneManager.LoadScene(sceneName);
     }
 
 }

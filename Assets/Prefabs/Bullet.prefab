@@ -106,6 +106,7 @@ MonoBehaviour:
   bulletSpeed: 0
   xFinger: 0
   yFinger: 0
+  sceneName: ColorSwitch
 --- !u!212 &212188938230079638
 SpriteRenderer:
   m_ObjectHideFlags: 1
