@@ -51,9 +51,9 @@ public class BulletCtrl : MonoBehaviour
         {
             ren.color = new Color(0.549f, 0.075f, 0.984f); // purple
             gameObject.name = "purple";
-	}
-        if (other.gameObject.name.Equals("turkiz")) 
-	{
+        }
+        if (other.gameObject.name.Equals("turkiz"))
+        {
             ren.color = new Color(0.208f, 0.886f, 0.953f, 1.000f); // turkiz
             gameObject.name = "turkiz";
         }
@@ -61,7 +61,7 @@ public class BulletCtrl : MonoBehaviour
         {
             ren.color = new Color(0.965f, 0.875f, 0.055f, 1.000f); // yellow
             gameObject.name = "yellow";
-	}
+        }
         if (other.gameObject.name.Equals("StartGameButton"))
             SceneManager.LoadScene(sceneName);
     }
