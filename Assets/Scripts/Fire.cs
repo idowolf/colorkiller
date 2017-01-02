@@ -38,11 +38,7 @@ public class Fire : MonoBehaviour
             float y = 4.25576412f * Mathf.Sin((rotZ + 180) * Mathf.Deg2Rad);
             BulletCtrl instBullet = GameObject.Instantiate(bullet, offsetPosition(0, 0), Quaternion.identity);
             instBullet.xFinger = x;
-            instBullet.yFinger = y;
-            Debug.Log("mousePos" + mousePos);
-            Debug.Log("angle=" + rotZ);
-            Debug.Log("x=" + x);
-            Debug.Log("y=" + y);
+            instBullet.yFinger = y; 
             instBullet.bulletSpeed = 20;
         }
 
