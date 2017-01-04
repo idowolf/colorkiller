@@ -332,7 +332,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 381279963}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.4, y: 5.93, z: 0}
+  m_LocalPosition: {x: 18.4, y: 5.8, z: 0}
   m_LocalScale: {x: 8.293399, y: 8.293399, z: 8.293399}
   m_Children: []
   m_Father: {fileID: 12070353}
@@ -780,7 +780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 2
-  camera: {fileID: 0}
+  androidRotSpeed: 5
 --- !u!50 &939512858
 Rigidbody2D:
   serializedVersion: 4
