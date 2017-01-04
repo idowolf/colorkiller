@@ -18,6 +18,7 @@ public class Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos = new Vector3(mousePos.x, mousePos.y, 0f);
         dif = mousePos - transform.position;
@@ -28,12 +29,11 @@ public class Fire : MonoBehaviour
 
 
         // When the spacebar is pressed 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             // Create a new bullet at “transform.position” 
             // Which is the current position of the ship
             //Quaternion.identity = add the bullet with no rotation
-
             float x = 4.25576412f * Mathf.Cos((rotZ + 180) * Mathf.Deg2Rad);
             float y = 4.25576412f * Mathf.Sin((rotZ + 180) * Mathf.Deg2Rad);
             BulletCtrl instBullet = GameObject.Instantiate(bullet, offsetPosition(0, 0), Quaternion.identity);

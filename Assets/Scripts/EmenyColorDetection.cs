@@ -24,7 +24,6 @@ public class EmenyColorDetection : MonoBehaviour {
         {
             Destroy(gameObject);
             Destroy(other.gameObject);
-            Debug.Log("ASDFASFGADFGADFGADdddddddddddddddddddd");
         }
     }
 }
