@@ -13,6 +13,7 @@ public class BulletCtrl : MonoBehaviour
     public float yFinger;
     public string sceneName;
     private Vector3 oldVelocity;
+    
 
     // Use this for initialization
     void Start()
