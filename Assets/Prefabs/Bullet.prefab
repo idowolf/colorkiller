@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114141898037681722}
   - component: {fileID: 50787560286387006}
   - component: {fileID: 58348426950551770}
+  - component: {fileID: 114740535088894854}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -107,6 +108,18 @@ MonoBehaviour:
   xFinger: 0
   yFinger: 0
   sceneName: ColorSwitch
+--- !u!114 &114740535088894854
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1262413042601760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816c1398e140a87408fdd284e0b7477c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
 --- !u!212 &212188938230079638
 SpriteRenderer:
   m_ObjectHideFlags: 1
