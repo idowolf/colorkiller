@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class SpiralMovement : MonoBehaviour {
     private float angle, x0, y0, calcSpeed;
-    public float timeToCompleteCircle = 20;
-    public float radius,speedFactor;
+    public float timeToCompleteCircle;
+    public float radius,radiusDegradation;
     CircleDirection circleDirection;
     // Use this for initialization
     void Start () {
@@ -21,7 +21,7 @@ public class SpiralMovement : MonoBehaviour {
         if (radius < 0)
             return;
         Vector3 pos = transform.position;
-        radius -= speedFactor * Time.deltaTime;
+        radius -= radiusDegradation * Time.deltaTime;
         pos.x = x0 + Mathf.Cos(angle) * radius;
         pos.y = y0 + Mathf.Sin(angle) * radius;
         transform.position = pos;
