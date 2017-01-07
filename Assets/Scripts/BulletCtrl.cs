@@ -66,9 +66,9 @@ public class BulletCtrl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
+        if (other.GetComponent<ColoredObject>() != null)
+            gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
         if (other.gameObject.name.Equals("StartGameButton"))
             SceneManager.LoadScene(sceneName);
     }
-
 }
