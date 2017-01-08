@@ -44,31 +44,33 @@ public class BulletCtrl : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
-        {
-            Destroy(gameObject);
-            Destroy(other.gameObject);
-        }
-        // get the point of contact
-        ContactPoint2D contact = other.contacts[0];
-
-        // reflect our old velocity off the contact point's normal vector
-        Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, contact.normal);
-
-        // assign the reflected velocity back tohe rigidbody
-        r2d.velocity = reflectedVelocity;
-        // rotate the object by the same ammount we changed its velocity
-        Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
-        transform.rotation = rotation * transform.rotation;
-
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if(other.GetComponent<EnemyScript>() == null) { 
         if (other.GetComponent<ColoredObject>() != null)
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
         if (other.gameObject.name.Equals("StartGameButton"))
             SceneManager.LoadScene(sceneName);
+        }
+        else
+        {
+            if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
+            {
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+            }
+            // get the point of contact
+
+            // reflect our old velocity off the contact point's normal vector
+            Vector3 reflectedVelocity = Vector3.Reflect(oldVelocity, other.transform.position.normalized);
+
+            // assign the reflected velocity back tohe rigidbody
+            r2d.velocity = reflectedVelocity;
+            // rotate the object by the same ammount we changed its velocity
+            Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
+            transform.rotation = rotation * transform.rotation;
+        }
     }
 }
