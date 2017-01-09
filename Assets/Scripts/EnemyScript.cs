@@ -20,12 +20,14 @@ public class EnemyScript : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D other)
     {
         if(other.gameObject.GetComponent<BulletCtrl>() != null) // other is a bullet
+            
         {
             // bullet is same color as enemy
             if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
             {
                 Destroy(gameObject);
                 Destroy(other.gameObject);
+
             }
             // otherwise, do nothing
         }
@@ -42,7 +44,6 @@ public class EnemyScript : MonoBehaviour {
         // rotate the object by the same ammount we changed its velocity
         Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
         transform.rotation = rotation * transform.rotation;
-
-
     }
+
 }
