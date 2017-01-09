@@ -13,7 +13,7 @@ public class BulletCtrl : MonoBehaviour
     public float yFinger;
     public string sceneName;
     private Vector3 oldVelocity;
-    
+
 
     // Use this for initialization
     void Start()
@@ -60,6 +60,7 @@ public class BulletCtrl : MonoBehaviour
             {
                 Destroy(gameObject);
                 Destroy(other.gameObject);
+               
             }
             // get the point of contact
 
@@ -73,4 +74,5 @@ public class BulletCtrl : MonoBehaviour
             transform.rotation = rotation * transform.rotation;
         }
     }
+
 }
