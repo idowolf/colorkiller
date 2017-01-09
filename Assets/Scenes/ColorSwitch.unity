@@ -217,11 +217,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4144443171470294, guid: 1be1e0475c7cc604eae502b8a1880680, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -18.8
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 4144443171470294, guid: 1be1e0475c7cc604eae502b8a1880680, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: -9.5
       objectReference: {fileID: 0}
     - target: {fileID: 4144443171470294, guid: 1be1e0475c7cc604eae502b8a1880680, type: 2}
       propertyPath: m_LocalPosition.z
@@ -247,15 +247,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114043778697428974, guid: 1be1e0475c7cc604eae502b8a1880680,
+    - target: {fileID: 114733885555438352, guid: 1be1e0475c7cc604eae502b8a1880680,
         type: 2}
-      propertyPath: moveToCenter
-      value: 1
+      propertyPath: color
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114043778697428974, guid: 1be1e0475c7cc604eae502b8a1880680,
         type: 2}
       propertyPath: speed
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1be1e0475c7cc604eae502b8a1880680, type: 2}
@@ -265,6 +265,51 @@ Transform:
   m_PrefabParentObject: {fileID: 4144443171470294, guid: 1be1e0475c7cc604eae502b8a1880680,
     type: 2}
   m_PrefabInternal: {fileID: 40013056}
+--- !u!1 &263169310 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1649095863207394, guid: 92b41d1d08db2e94c86a9017f8812dde,
+    type: 2}
+  m_PrefabInternal: {fileID: 751449074}
+--- !u!114 &263169315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 263169310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ca7055595a2fd4da43c7a719e99224, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &263169318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 263169310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddf9df91f82aa84fb9de959ff56cf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particale: {fileID: 0}
+--- !u!1 &638730528 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1238299356193630, guid: cbc7958ea7b0da941873e81895f99d71,
+    type: 2}
+  m_PrefabInternal: {fileID: 925040309}
+--- !u!114 &638730529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638730528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddf9df91f82aa84fb9de959ff56cf2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particale: {fileID: 0}
 --- !u!1001 &751449074
 Prefab:
   m_ObjectHideFlags: 0
@@ -308,7 +353,23 @@ Prefab:
       propertyPath: m_Name
       value: FreezePowerup
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 58051377226746538, guid: 92b41d1d08db2e94c86a9017f8812dde,
+        type: 2}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58051377226746538, guid: 92b41d1d08db2e94c86a9017f8812dde,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 114290540000310522, guid: 92b41d1d08db2e94c86a9017f8812dde,
+        type: 2}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114599887228494800, guid: 92b41d1d08db2e94c86a9017f8812dde, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 92b41d1d08db2e94c86a9017f8812dde, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &925040309

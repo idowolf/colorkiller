@@ -1,14 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyScript : MonoBehaviour {
     private Rigidbody2D r2d;
 
     private Vector3 oldVelocity;
+    private float animationTime;
+    private bool endGame;
     // Use this for initialization
     void Start()
     {
+        endGame = false;
+        animationTime = 0;
         r2d = GetComponent<Rigidbody2D>();
     }
 
@@ -20,6 +25,15 @@ public class EnemyScript : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        if (endGame)
+        {
+            animationTime += Time.deltaTime;
+            Debug.Log(animationTime);
+            if (animationTime > GetComponent<Farticle>().Particale.main.duration) { 
+                SceneManager.LoadScene("GameOver");
+                Destroy(gameObject);
+            }
+        }
         if(other.gameObject.GetComponent<BulletCtrl>() != null) // other is a bullet
             
         {
@@ -46,5 +60,17 @@ public class EnemyScript : MonoBehaviour {
         Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
         transform.rotation = rotation * transform.rotation;
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<SpaceshipScript>() != null) { 
+            endGame = true;
+        }
+        Debug.Log(endGame);
+        Destroy(other.gameObject);
+        if (!endGame)
+            Destroy(gameObject);
 
+    }
 }
+
+

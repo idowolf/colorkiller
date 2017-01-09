@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Farticle : MonoBehaviour {
 
-    private ParticleSystem Particale;
+    public ParticleSystem Particale;
     // Use this for initialization
 
     
@@ -23,7 +23,7 @@ public class Farticle : MonoBehaviour {
         
         Particale = Resources.Load<ParticleSystem>("Ex_" + gameObject.GetComponent<ColoredObject>().color.ToString().ToLower());
 
-        if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
+        if (other.GetComponent<SpaceshipScript>() != null || gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
          {
             InitParticle();
          }

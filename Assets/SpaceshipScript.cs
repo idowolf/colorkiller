@@ -17,11 +17,5 @@ public class SpaceshipScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.GetComponent<EnemyScript>() != null)
-        {
-            Destroy(gameObject);
-            SceneManager.LoadScene("GameOver");
-        }
-
     }
 }

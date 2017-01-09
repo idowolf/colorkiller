@@ -48,7 +48,7 @@ public class BulletCtrl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.GetComponent<EnemyScript>() == null) { 
+        if(!isDestroyable(other.gameObject)) { 
         if (other.GetComponent<ColoredObject>() != null)
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
         if (other.gameObject.name.Equals("StartGameButton"))
@@ -75,4 +75,8 @@ public class BulletCtrl : MonoBehaviour
         }
     }
 
+    public bool isDestroyable(GameObject obj)
+    {
+        return obj.GetComponent<EnemyScript>() != null || obj.GetComponent<PowerupScript>() != null;
+    }
 }
