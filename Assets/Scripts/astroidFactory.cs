@@ -15,7 +15,8 @@ public class astroidFactory : MonoBehaviour
     public int accelerationRate;
     public bool randomSpawn;
     public ObjectColor myColor;
-
+    public float speed;
+    public bool moveToCenter;
 
     public int activation;
     public int disActivation;
@@ -56,6 +57,8 @@ public class astroidFactory : MonoBehaviour
             new Vector2(transform.position.x, (y1 + y2) / 2));
         //= new Vector2(transform.position.x , Random.Range(y1, y2));
         GameObject astroid1 = Instantiate(astroid, spawnPoint, Quaternion.identity);
+        astroid1.GetComponent<LinearMovement>().speed = speed;
+        astroid1.GetComponent<LinearMovement>().moveToCenter = moveToCenter;
         totalAstroidNum++;
         score++;
         astroid1.GetComponent<ColoredObject>().SetColor(myColor);
