@@ -41,8 +41,9 @@ GameObject:
   - component: {fileID: 50883031470443920}
   - component: {fileID: 58437841657255322}
   - component: {fileID: 114043778697428974}
+  - component: {fileID: 114317155281150978}
   m_Layer: 8
-  m_Name: LinearAsteroid
+  m_Name: LinearTowardsMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 1493044479274970}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.4, y: 7.9, z: 0}
-  m_LocalScale: {x: 4.21334, y: 4.67513, z: 9.880819}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4417017702936306}
   m_Father: {fileID: 0}
@@ -115,13 +116,29 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1493044479274970}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3801afa9564b6e4cbf7f53ecdc61aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   degree: 270
+  moveToCenter: 0
   speed: 9
+  bullet: {fileID: 1262413042601760, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
+--- !u!114 &114317155281150978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1493044479274970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce43c0ee28242e42b9adaf3906b41b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  r2d: {fileID: 0}
+  speed: 20
+  oldVelocity: {x: 0, y: 0, z: 0}
   bullet: {fileID: 1262413042601760, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
 --- !u!114 &114560361158127526
 MonoBehaviour:
