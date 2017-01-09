@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3801afa9564b6e4cbf7f53ecdc61aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degree: 0
+  degree: 270
   speed: 9
   bullet: {fileID: 1262413042601760, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
 --- !u!114 &114560361158127526
