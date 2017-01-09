@@ -7,12 +7,13 @@ public class Fire : MonoBehaviour
     
     private Vector3 mousePos;
     public BulletCtrl bullet;
-    public Vector3 dif;
-
+    private Vector3 dif;
+    public float rotationSpeed;
+    private bool shoot;
     // Use this for initialization
     void Start()
     {
-
+        shoot = false;
     }
 
     // Update is called once per frame
@@ -25,11 +26,16 @@ public class Fire : MonoBehaviour
         dif.Normalize();
         float rotZ = Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg;
 
-        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + 120);
+        Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, rotZ + 150), Time.deltaTime * rotationSpeed * 100f);
 
-        // When the spacebar is pressed 
         if (Input.GetKeyUp(KeyCode.Mouse0))
+            shoot = true;
+        // When the spacebar is pressed 
+        if (shoot && Quaternion.Angle(transform.rotation, Quaternion.Euler(0f, 0f, rotZ + 150)) < 1)
         {
             // Create a new bullet at “transform.position” 
             // Which is the current position of the ship
@@ -40,6 +46,7 @@ public class Fire : MonoBehaviour
             instBullet.xFinger = x;
             instBullet.yFinger = y; 
             instBullet.bulletSpeed = 20;
+            shoot = false;
         }
 
 
