@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour {
     private Rigidbody2D r2d;
+
     private Vector3 oldVelocity;
     // Use this for initialization
     void Start()
