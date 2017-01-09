@@ -9,10 +9,11 @@ public class Fire : MonoBehaviour
     public BulletCtrl bullet;
     private Vector3 dif;
     public float rotationSpeed;
+    private bool shoot;
     // Use this for initialization
     void Start()
     {
-
+        shoot = false;
     }
 
     // Update is called once per frame
@@ -30,8 +31,11 @@ public class Fire : MonoBehaviour
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, Quaternion.Euler(0f, 0f, rotZ + 150), Time.deltaTime * rotationSpeed * 100f);
-        // When the spacebar is pressed 
+
         if (Input.GetKeyUp(KeyCode.Mouse0))
+            shoot = true;
+        // When the spacebar is pressed 
+        if (shoot && Quaternion.Angle(transform.rotation, Quaternion.Euler(0f, 0f, rotZ + 150)) < 1)
         {
             // Create a new bullet at “transform.position” 
             // Which is the current position of the ship
@@ -42,6 +46,7 @@ public class Fire : MonoBehaviour
             instBullet.xFinger = x;
             instBullet.yFinger = y; 
             instBullet.bulletSpeed = 20;
+            shoot = false;
         }
 
 
