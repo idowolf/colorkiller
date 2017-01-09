@@ -269,7 +269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddaec2474f8c2dd43803ee81ee6bb958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: level1
+  sceneName: ColorSwitch
 --- !u!4 &494251293
 Transform:
   m_ObjectHideFlags: 0

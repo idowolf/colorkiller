@@ -15,7 +15,7 @@ public class level1Logic : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (astroidFactory.score >= 20){
-            //SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName);
 
         }
 
