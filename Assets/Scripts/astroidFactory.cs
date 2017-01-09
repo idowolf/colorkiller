@@ -15,8 +15,8 @@ public class astroidFactory : MonoBehaviour
     public int accelerationRate;
     public bool randomSpawn;
     public ObjectColor myColor;
-   
-    
+
+
     public int activation;
     public int disActivation;
     // Use this for initialization
@@ -25,7 +25,7 @@ public class astroidFactory : MonoBehaviour
 
         InvokeRepeating("addAstroid", 0, spawnTime);
         astroidCounter = 1;
-       
+
 
     }
 
@@ -52,16 +52,17 @@ public class astroidFactory : MonoBehaviour
         var y1 = transform.position.y - rd.bounds.size.y / 2;
         float y2 = transform.position.y + rd.bounds.size.y / 2;
         Vector2 spawnPoint;
-        spawnPoint = (randomSpawn ? new Vector2(transform.position.x, Random.Range(y1, y2)):
-            new Vector2(transform.position.x, (y1+y2)/2 ));
+        spawnPoint = (randomSpawn ? new Vector2(transform.position.x, Random.Range(y1, y2)) :
+            new Vector2(transform.position.x, (y1 + y2) / 2));
         //= new Vector2(transform.position.x , Random.Range(y1, y2));
         GameObject astroid1 = Instantiate(astroid, spawnPoint, Quaternion.identity);
         totalAstroidNum++;
         score++;
         astroid1.GetComponent<ColoredObject>().SetColor(myColor);
         astroidCounter++;
-        
-        
+
+
 
     }
+    
 }
