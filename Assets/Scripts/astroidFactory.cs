@@ -62,7 +62,7 @@ public class astroidFactory : MonoBehaviour
         astroid1.GetComponent<LinearMovement>().speed = speed;
         astroid1.GetComponent<LinearMovement>().moveToCenter = moveToCenter;
         astroid1.GetComponent<LinearMovement>().degree = degree;
-        astroid1.GetComponent<Transform>().localScale *= Random.Range((size-0.1f),(size+0.1f));
+        astroid1.GetComponent<Transform>().localScale *= Random.Range((size-0.25f),(size+0.25f));
 
         totalAstroidNum++;
         score++;
