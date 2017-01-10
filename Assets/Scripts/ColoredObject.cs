@@ -51,7 +51,8 @@ public class ColoredObject : MonoBehaviour {
                     drawColor = new Color(0.965f, 0.875f, 0.055f, 1.000f); // yellow
                     break;
             }
-            ren.color = drawColor;
+            if(GetComponent<SpriteRenderer>())
+                ren.color = drawColor;
             return;
         }
         ren.sprite = Resources.Load<Sprite>(ren.sprite.name.Split(' ')[0] + "_" + color.ToString().ToLower());

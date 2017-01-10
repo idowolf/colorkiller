@@ -59,7 +59,6 @@ public class BulletCtrl : MonoBehaviour
             if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
             {
                 Destroy(gameObject);
-                Destroy(other.gameObject);
                
             }
             // get the point of contact
@@ -75,8 +74,11 @@ public class BulletCtrl : MonoBehaviour
         }
     }
 
-    public bool isDestroyable(GameObject obj)
+    public static bool isDestroyable(GameObject obj)
     {
-        return obj.GetComponent<EnemyScript>() != null || obj.GetComponent<PowerupScript>() != null;
+        return obj.GetComponent<EnemyScript>() 
+            || obj.GetComponent<FreezePowerupScript>()
+            || obj.GetComponent<SameColorPowerupScript>()
+            || obj.GetComponent<SpeedupArcPowerupScript>();
     }
 }
