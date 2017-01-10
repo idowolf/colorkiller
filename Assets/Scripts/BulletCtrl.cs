@@ -48,7 +48,7 @@ public class BulletCtrl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.GetComponent<EnemyScript>() == null) { 
+        if(!isDestroyable(other.gameObject)) { 
         if (other.GetComponent<ColoredObject>() != null)
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
         if (other.gameObject.name.Equals("StartGameButton"))
@@ -59,7 +59,6 @@ public class BulletCtrl : MonoBehaviour
             if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
             {
                 Destroy(gameObject);
-                Destroy(other.gameObject);
                
             }
             // get the point of contact
@@ -75,4 +74,11 @@ public class BulletCtrl : MonoBehaviour
         }
     }
 
+    public static bool isDestroyable(GameObject obj)
+    {
+        return obj.GetComponent<EnemyScript>() 
+            || obj.GetComponent<FreezePowerupScript>()
+            || obj.GetComponent<SameColorPowerupScript>()
+            || obj.GetComponent<SpeedupArcPowerupScript>();
+    }
 }

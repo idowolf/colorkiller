@@ -3,37 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyScript : Destroyable
+public class SameColorPowerupScript : Destroyable
 {
     private Rigidbody2D r2d;
-    public static int EnemiesCount = 0;
-    public int enemyID;
-
+    public ObjectColor targetColor = ObjectColor.Yellow;
+    public float effectLength = 5f;
     private Vector3 oldVelocity;
-    private float animationTime;
-    private bool initiateSelfDestruct;
+    private bool ready;
+    public static bool stillActive;
+    static EnemyScript[] enemies;
+    static Dictionary<int, ObjectColor> enemySpeedDict;
     // Use this for initialization
     new void Start()
     {
         base.Start();
-        animationTime = 0;
         r2d = GetComponent<Rigidbody2D>();
     }
-
-    void FixedUpdate()
+    void Update()
     {
-        //transform.position += transform.up * bulletSpeed * Time.deltaTime;
-        oldVelocity = r2d.velocity;
-        if (initiateSelfDestruct)
+        if (ready)
         {
             gameObject.transform.localScale = new Vector3(0, 0, 0);
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            StartCoroutine(selfDestruct());
+            StartCoroutine(freezeTime());
+
         }
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
+
         // get the point of contact
         ContactPoint2D contact = other.contacts[0];
 
@@ -54,16 +53,41 @@ public class EnemyScript : Destroyable
         bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
         bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
         if (flg1 || flg2 || flg3)
+            ready = true;
+    }
+    
+    public IEnumerator freezeTime()
+    {
+        if (!stillActive)
         {
-            initiateSelfDestruct = true;
+            stillActive = true;
+            enemies = FindObjectsOfType(typeof(EnemyScript)) as EnemyScript[];
+
+            enemySpeedDict = new Dictionary<int, ObjectColor>();
+
+            foreach (EnemyScript enemy in enemies)
+            {
+                if (enemy)
+                {
+                    enemySpeedDict.Add(enemy.enemyID, enemy.gameObject.GetComponent<ColoredObject>().color);
+                    enemy.gameObject.GetComponent<ColoredObject>().SetColor(targetColor, false); // TODO
+                }
+            }
         }
+
+        yield return new WaitForSeconds(effectLength);
+        foreach (EnemyScript enemy in enemies)
+        {
+            if (enemy)
+                enemy.gameObject.GetComponent<ColoredObject>().SetColor(enemySpeedDict[enemy.enemyID]); // TODO
+        }
+        if (stillActive)
+            stillActive = false;
+        GameObject.Destroy(gameObject);
+
     }
 
-    public IEnumerator selfDestruct()
-    {
-        yield return new WaitForSeconds(1);
-        GameObject.Destroy(gameObject);
-    }
+
 }
 
 

@@ -3,37 +3,49 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class EnemyScript : Destroyable
+public class Destroyable : MonoBehaviour
+{
+    public static int PowerupsCount = 0;
+    public int powerupID;
+    public void Start()
+    {
+        powerupID = PowerupsCount;
+        PowerupsCount++;
+    }
+
+}
+
+public class SpeedupArcPowerupScript : Destroyable
 {
     private Rigidbody2D r2d;
-    public static int EnemiesCount = 0;
-    public int enemyID;
-
+    public float multiplier = 1.5f;
+    public float effectLength = 5f;
     private Vector3 oldVelocity;
-    private float animationTime;
-    private bool initiateSelfDestruct;
+    private bool ready;
+    public static bool stillActive;
+    static Rotate[] enemies;
+    static Dictionary<int, ObjectColor> enemySpeedDict;
     // Use this for initialization
     new void Start()
     {
         base.Start();
-        animationTime = 0;
         r2d = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        //transform.position += transform.up * bulletSpeed * Time.deltaTime;
-        oldVelocity = r2d.velocity;
-        if (initiateSelfDestruct)
+        if (ready)
         {
             gameObject.transform.localScale = new Vector3(0, 0, 0);
             gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            StartCoroutine(selfDestruct());
+            StartCoroutine(freezeTime());
+
         }
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
+
         // get the point of contact
         ContactPoint2D contact = other.contacts[0];
 
@@ -54,16 +66,42 @@ public class EnemyScript : Destroyable
         bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
         bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
         if (flg1 || flg2 || flg3)
+            ready = true;
+    }
+    
+    public IEnumerator freezeTime()
+    {
+        Rotate spaceship = FindObjectOfType(typeof(Rotate)) as Rotate;
+        float prevRotSpeed = spaceship.rotSpeed;
+        float prevAndroidRotSpeed = spaceship.androidRotSpeed;
+
+        if (!stillActive)
         {
-            initiateSelfDestruct = true;
+            stillActive = true;
+
+            enemySpeedDict = new Dictionary<int, ObjectColor>();
+
+            if (spaceship)
+            {
+                spaceship.rotSpeed*=multiplier;
+                spaceship.androidRotSpeed *= multiplier;
+            }
         }
+
+        yield return new WaitForSeconds(effectLength);
+        Debug.Log(spaceship);
+        if (spaceship)
+        {
+            spaceship.rotSpeed = prevRotSpeed;
+            spaceship.androidRotSpeed = prevAndroidRotSpeed;
+        }
+        if (stillActive)
+            stillActive = false;
+        GameObject.Destroy(gameObject);
+
     }
 
-    public IEnumerator selfDestruct()
-    {
-        yield return new WaitForSeconds(1);
-        GameObject.Destroy(gameObject);
-    }
+
 }
 
 
