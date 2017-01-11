@@ -9,6 +9,7 @@ public class Rotate : MonoBehaviour {
     public float rotSpeed = 2;
     public float androidRotSpeed = 5;
     private GameObject endRotation;
+    
     // Use this for initialization
     void Start ()
     {

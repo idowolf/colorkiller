@@ -13,6 +13,7 @@ public class BulletCtrl : MonoBehaviour
     public float yFinger;
     public string sceneName;
     private Vector3 oldVelocity;
+    public AudioClip audio;
 
 
     // Use this for initialization
@@ -71,6 +72,8 @@ public class BulletCtrl : MonoBehaviour
             // rotate the object by the same ammount we changed its velocity
             Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
             transform.rotation = rotation * transform.rotation;
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
         }
     }
 
