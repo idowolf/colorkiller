@@ -16,8 +16,7 @@ public class SpaceshipScript : MonoBehaviour {
         //transform.position += transform.up * bulletSpeed * Time.deltaTime;
         if (initiateSelfDestruct)
         {
-            gameObject.transform.localScale = new Vector3(0, 0, 0);
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            BulletCtrl.FakeDestroy(gameObject);
             StartCoroutine(selfDestruct());
         }
     }

@@ -91,7 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ec0c4fb3858834baed099798a1f74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 1.5
+  powerupID: 0
+  initiateSelfDestruct: 0
+  multiplier: 3
   effectLength: 5
 --- !u!114 &114648445479425884
 MonoBehaviour:

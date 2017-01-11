@@ -20,21 +20,37 @@ public class Farticle : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
-        Particale = Resources.Load<ParticleSystem>("Ex_" + gameObject.GetComponent<ColoredObject>().color.ToString().ToLower());
-        bool flg1 = BulletCtrl.isDestroyable(gameObject) && gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
+
+        //Particale = Resources.Load<ParticleSystem>("Ex_" + gameObject.GetComponent<ColoredObject>().color.ToString().ToLower());
+        //bool flg1 = BulletCtrl.isDestroyable(gameObject) && gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
+        //bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
+        //bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
+        //if (flg1 || flg2 || flg3)
+        // {
+        //    InitParticle();
+        // }
+        CallMeMaybe(other.gameObject);
+     }
+    
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        CallMeMaybe(other.gameObject);
+    }
+    void CallMeMaybe(GameObject other)
+    {
+        Particale = Resources.Load<ParticleSystem>("Ex_" + GetComponent<ColoredObject>().color.ToString().ToLower());
+        bool flg1 = BulletCtrl.isDestroyable(gameObject) && GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
         bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
         bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
         if (flg1 || flg2 || flg3)
-         {
+        {
             InitParticle();
-         }
-     }
-    
+        }
+    }
     void InitParticle()
     {
         ParticleSystem ps = (ParticleSystem)Instantiate(Particale, transform.position, Quaternion.identity);
-        Destroy(ps, .8f);
+        Destroy(ps, 1f);
 
         //ParticleSystem m_System = GetComponent<ParticleSystem>();
         //ParticleSystem.MainModule main = m_System.main;
