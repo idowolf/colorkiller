@@ -7,45 +7,38 @@ public class Destroyable : MonoBehaviour
 {
     public static int PowerupsCount = 0;
     public int powerupID;
+    private Rigidbody2D r2d;
+    private Vector3 oldVelocity;
+
+    public bool initiateSelfDestruct;
     public void Start()
     {
+        r2d = GetComponent<Rigidbody2D>();
+
         powerupID = PowerupsCount;
         PowerupsCount++;
     }
 
-}
-
-public class SpeedupArcPowerupScript : Destroyable
-{
-    private Rigidbody2D r2d;
-    public float multiplier = 1.5f;
-    public float effectLength = 5f;
-    private Vector3 oldVelocity;
-    private bool ready;
-    public static bool stillActive;
-    static Rotate[] enemies;
-    static Dictionary<int, ObjectColor> enemySpeedDict;
-    // Use this for initialization
-    new void Start()
-    {
-        base.Start();
-        r2d = GetComponent<Rigidbody2D>();
-    }
-
     void Update()
     {
-        if (ready)
+        oldVelocity = r2d.velocity;
+        if (initiateSelfDestruct)
         {
-            gameObject.transform.localScale = new Vector3(0, 0, 0);
-            gameObject.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            BulletCtrl.FakeDestroy(gameObject);
             StartCoroutine(freezeTime());
 
         }
     }
 
+    protected virtual IEnumerator freezeTime()
+    {
+        return null;
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
-
+        if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
+            initiateSelfDestruct = true;
         // get the point of contact
         ContactPoint2D contact = other.contacts[0];
 
@@ -59,27 +52,44 @@ public class SpeedupArcPowerupScript : Destroyable
         transform.rotation = rotation * transform.rotation;
     }
 
-
     void OnTriggerEnter2D(Collider2D other)
     {
         bool flg1 = BulletCtrl.isDestroyable(gameObject) && gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
         bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
         bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
         if (flg1 || flg2 || flg3)
-            ready = true;
+            initiateSelfDestruct = true;
     }
-    
-    public IEnumerator freezeTime()
+}
+
+public class SpeedupArcPowerupScript : Destroyable
+{
+    private Rigidbody2D r2d;
+    public float multiplier = 1.5f;
+    public float effectLength = 5f;
+    private Vector3 oldVelocity;
+    public static bool stillActive;
+    static Rotate[] enemies;
+    public static Rotate spaceship;
+    public static float prevRotSpeed;
+    public static float prevAndroidRotSpeed;
+    static Dictionary<int, ObjectColor> enemySpeedDict;
+    // Use this for initialization
+    new void Start()
     {
-        Rotate spaceship = FindObjectOfType(typeof(Rotate)) as Rotate;
-        float prevRotSpeed = spaceship.rotSpeed;
-        float prevAndroidRotSpeed = spaceship.androidRotSpeed;
+        base.Start();
+        r2d = GetComponent<Rigidbody2D>();
+    }
+
+    protected override IEnumerator freezeTime()
+    {
 
         if (!stillActive)
         {
             stillActive = true;
-
-            enemySpeedDict = new Dictionary<int, ObjectColor>();
+             spaceship = FindObjectOfType(typeof(Rotate)) as Rotate;
+             prevRotSpeed = spaceship.rotSpeed;
+             prevAndroidRotSpeed = spaceship.androidRotSpeed;
 
             if (spaceship)
             {
@@ -89,7 +99,6 @@ public class SpeedupArcPowerupScript : Destroyable
         }
 
         yield return new WaitForSeconds(effectLength);
-        Debug.Log(spaceship);
         if (spaceship)
         {
             spaceship.rotSpeed = prevRotSpeed;

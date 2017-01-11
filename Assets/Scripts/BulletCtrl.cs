@@ -76,9 +76,13 @@ public class BulletCtrl : MonoBehaviour
 
     public static bool isDestroyable(GameObject obj)
     {
-        return obj.GetComponent<EnemyScript>() 
-            || obj.GetComponent<FreezePowerupScript>()
-            || obj.GetComponent<SameColorPowerupScript>()
-            || obj.GetComponent<SpeedupArcPowerupScript>();
+        return obj.GetComponent<Destroyable>();
+    }
+
+    public static void FakeDestroy(GameObject obj)
+    {
+        obj.transform.localScale = new Vector3(0, 0, 0);
+        obj.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        obj.GetComponent<Collider2D>().enabled = false;
     }
 }
