@@ -449,6 +449,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 505223126}
+  - component: {fileID: 505223127}
   m_Layer: 0
   m_Name: rightSwarm
   m_TagString: Untagged
@@ -471,6 +472,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &505223127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 505223125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3801afa9564b6e4cbf7f53ecdc61aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  degree: 0
+  moveToCenter: 0
+  speed: 0
+  bullet: {fileID: 0}
 --- !u!1001 &509096460
 Prefab:
   m_ObjectHideFlags: 0
