@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class SameColorPowerupScript : Destroyable
 {
-    private Rigidbody2D r2d;
     private ObjectColor targetColor;
     public float effectLength = 5f;
-    private Vector3 oldVelocity;
     public static bool stillActive;
     public static EnemyScript[] enemies;
     public static Dictionary<int, ObjectColor> enemySpeedDict;
@@ -16,7 +14,6 @@ public class SameColorPowerupScript : Destroyable
     new void Start()
     {
         base.Start();
-        r2d = GetComponent<Rigidbody2D>();
         targetColor = GetComponent<ColoredObject>().color;
     }
 
