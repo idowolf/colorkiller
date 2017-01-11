@@ -49,7 +49,7 @@ public class BulletCtrl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(!isDestroyable(other.gameObject)) { 
+        if (!isDestroyable(other.gameObject)) { 
         if (other.GetComponent<ColoredObject>() != null)
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
         if (other.gameObject.name.Equals("StartGameButton"))
@@ -60,8 +60,10 @@ public class BulletCtrl : MonoBehaviour
             if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
             {
                 Destroy(gameObject);
-               
+                return;
             }
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
             // get the point of contact
 
             // reflect our old velocity off the contact point's normal vector
@@ -72,8 +74,6 @@ public class BulletCtrl : MonoBehaviour
             // rotate the object by the same ammount we changed its velocity
             Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
             transform.rotation = rotation * transform.rotation;
-            AudioSource audio = GetComponent<AudioSource>();
-            audio.Play();
         }
     }
 

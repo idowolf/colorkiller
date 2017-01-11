@@ -7,7 +7,6 @@ public class RandomPowerupScript : Destroyable
 {
     public ObjectColor targetColor = ObjectColor.Yellow;
     private float effectLength = 1f;
-    private Vector3 oldVelocity;
     public static bool stillActive;
     public static EnemyScript[] enemies;
     public static Dictionary<int, ObjectColor> enemySpeedDict;

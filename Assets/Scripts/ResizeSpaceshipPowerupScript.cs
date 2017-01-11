@@ -5,10 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ResizeSpaceshipPowerupScript : Destroyable
 {
-    private Rigidbody2D r2d;
     public float multiplier = 0.5f;
     public float effectLength = 5f;
-    private Vector3 oldVelocity;
     public static bool stillActive;
     public static SpaceshipScript spaceship;
     public static Vector3 prevScale;
@@ -17,7 +15,6 @@ public class ResizeSpaceshipPowerupScript : Destroyable
     new void Start()
     {
         base.Start();
-        r2d = GetComponent<Rigidbody2D>();
     }
 
     protected override IEnumerator freezeTime()

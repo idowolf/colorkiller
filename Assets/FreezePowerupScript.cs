@@ -5,9 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class FreezePowerupScript : Destroyable
 {
-    private Rigidbody2D r2d;
     public float effectLength = 5f;
-    private Vector3 oldVelocity;
     public static bool stillActive;
     public static Destroyable[] powerups;
     public static Dictionary<int, Vector3> powerupSpeedDict;
@@ -15,7 +13,6 @@ public class FreezePowerupScript : Destroyable
     new void Start()
     {
         base.Start();
-        r2d = GetComponent<Rigidbody2D>();
     }
 
     protected override IEnumerator freezeTime()
