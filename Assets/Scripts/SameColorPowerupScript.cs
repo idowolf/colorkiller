@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SameColorPowerupScript : Destroyable
 {
     private Rigidbody2D r2d;
-    public ObjectColor targetColor = ObjectColor.Yellow;
+    private ObjectColor targetColor;
     public float effectLength = 5f;
     private Vector3 oldVelocity;
     public static bool stillActive;
@@ -17,6 +17,7 @@ public class SameColorPowerupScript : Destroyable
     {
         base.Start();
         r2d = GetComponent<Rigidbody2D>();
+        targetColor = GetComponent<ColoredObject>().color;
     }
 
     protected override IEnumerator freezeTime()
@@ -32,7 +33,7 @@ public class SameColorPowerupScript : Destroyable
             {
                 if (enemy)
                 {
-                    enemySpeedDict.Add(enemy.enemyID, enemy.gameObject.GetComponent<ColoredObject>().color);
+                    enemySpeedDict.Add(enemy.powerupID, enemy.gameObject.GetComponent<ColoredObject>().color);
                     enemy.gameObject.GetComponent<ColoredObject>().SetColor(targetColor, false); // TODO
                 }
             }
@@ -42,7 +43,7 @@ public class SameColorPowerupScript : Destroyable
         foreach (EnemyScript enemy in enemies)
         {
             if (enemy)
-                enemy.gameObject.GetComponent<ColoredObject>().SetColor(enemySpeedDict[enemy.enemyID]); // TODO
+                enemy.gameObject.GetComponent<ColoredObject>().SetColor(enemySpeedDict[enemy.powerupID]); // TODO
         }
         if (stillActive)
             stillActive = false;

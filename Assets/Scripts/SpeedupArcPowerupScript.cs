@@ -83,7 +83,8 @@ public class SpeedupArcPowerupScript : Destroyable
 
     protected override IEnumerator freezeTime()
     {
-
+        initiateSelfDestruct = false;
+        bool activated = false;
         if (!stillActive)
         {
             stillActive = true;
@@ -91,18 +92,25 @@ public class SpeedupArcPowerupScript : Destroyable
              prevRotSpeed = spaceship.rotSpeed;
              prevAndroidRotSpeed = spaceship.androidRotSpeed;
 
-            if (spaceship)
-            {
-                spaceship.rotSpeed*=multiplier;
+
+        }
+        if (spaceship)
+        {
+            if((spaceship.rotSpeed < prevRotSpeed * 4 && spaceship.androidRotSpeed < prevAndroidRotSpeed * 4)
+                || GetComponent<SwitchPowerupScript>()) {
+                activated = true;
+                spaceship.rotSpeed *= multiplier;
                 spaceship.androidRotSpeed *= multiplier;
             }
         }
-
+        Debug.Log(spaceship.rotSpeed);
         yield return new WaitForSeconds(effectLength);
         if (spaceship)
         {
-            spaceship.rotSpeed = prevRotSpeed;
-            spaceship.androidRotSpeed = prevAndroidRotSpeed;
+            if (activated) { 
+            spaceship.rotSpeed /= multiplier;
+            spaceship.androidRotSpeed /= multiplier;
+            }
         }
         if (stillActive)
             stillActive = false;

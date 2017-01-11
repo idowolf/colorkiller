@@ -7,7 +7,6 @@ public class EnemyScript : Destroyable
 {
     private Rigidbody2D r2d;
     public static int EnemiesCount = 0;
-    public int enemyID;
 
     private Vector3 oldVelocity;
     // Use this for initialization
