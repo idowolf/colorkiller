@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public class astroidFactory : MonoBehaviour
 
 {
     Color color;
-    public GameObject astroid;                      
     public float spawnTime = 2;                     // rate of spawning 
     public int astroidCounter;                      // count astroids between spawnTime changes
     public static int totalAstroidNum = 0;          // count astroid per game
@@ -66,7 +64,7 @@ public class astroidFactory : MonoBehaviour
         spawnPoint = (randomSpawn ? new Vector2(transform.position.x, Random.Range(y1, y2)) :
             new Vector2(transform.position.x, (y1 + y2) / 2));
         //= new Vector2(transform.position.x , Random.Range(y1, y2));
-        GameObject astroid1 = Instantiate(astroid, spawnPoint, Quaternion.identity);
+        GameObject astroid1 = Instantiate(GetComponent<MeteorType>().GetMeteor(), spawnPoint, Quaternion.identity);
 
         //set meteor linear movement parameters
         astroid1.GetComponent<LinearMovement>().speed = speed;
@@ -77,8 +75,7 @@ public class astroidFactory : MonoBehaviour
         float tempSizeFactor = Random.Range((size - 0.25f), (size + 0.25f));
         astroid1.GetComponent<Transform>().localScale *=tempSizeFactor;
 
-        //  set meteor Type (MeteorNum)
-        //astroid1.GetComponent<MeteorType>().SetMeteorType(myMeteor , randomMeteor);
+        
 
         totalAstroidNum++;
         //update score - size does matters
