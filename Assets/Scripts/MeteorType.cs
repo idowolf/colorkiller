@@ -12,47 +12,54 @@ public enum MeteorNum
     
 }
 
-public class MeteorType : MonoBehaviour {
+public class MeteorType : MonoBehaviour
+{
+    public MeteorNum myMeteor;
+    private GameObject selectedMeteor;
+    public GameObject[] meteorPrefabs;
+    public bool random;
+    // Use this for initialization
+    void Start()
+    {
+        ChooseMeteor(myMeteor, true);
+    }
 
-    astroidFactory factory;
+    // Update is called once per frame
+    void Update()
+    {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    }
 
-    /*
-    public void SetMeteorType(MeteorNum meteor , bool isRand) {
-        factory = gameObject.GetComponent<astroidFactory>();
-        if (isRand)
+    public void ChooseMeteor(MeteorNum newMeteor = MeteorNum.One, bool random = true)
+    {
+        if(!random)
+            this.myMeteor = newMeteor;
+        else
         {
-            float temp = Random.Range(1, 5.99f);
-            int tempInt = Mathf.FloorToInt(temp);
-            switch (tempInt)
-            {
-                case (1):
-                    meteor = MeteorNum.One;
-                    break;
-                case (2):
-                    meteor = MeteorNum.Two;
-                    break;
-                case (3):
-                    meteor = MeteorNum.Three;
-                    break;
-                case (4):
-                    meteor = MeteorNum.Four;
-                    break;
-                case (5):
-                    meteor = MeteorNum.Five;
-                    break;
-               
-            }
-            factory.astroid = meteor;
+            this.myMeteor = (MeteorNum)(Random.Range(0, 5));
         }
-    } */
+        switch (myMeteor)
+        {
+            case MeteorNum.One:
+                selectedMeteor = meteorPrefabs[0];
+                break;
+            case MeteorNum.Two:
+                selectedMeteor = meteorPrefabs[1];
+                break;
+            case MeteorNum.Three:
+                selectedMeteor = meteorPrefabs[2];
+                break;
+            case MeteorNum.Four:
+                selectedMeteor = meteorPrefabs[3];
+                break;
+            case MeteorNum.Five:
+                selectedMeteor = meteorPrefabs[4];
+                break;
+        }
+    }
+
+    public GameObject GetMeteor()
+    {
+        return selectedMeteor;
+    }
 }
