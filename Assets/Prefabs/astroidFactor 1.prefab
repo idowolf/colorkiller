@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212509679065054544}
   - component: {fileID: 114838796539527290}
   - component: {fileID: 114074383076593356}
+  - component: {fileID: 114116767731096208}
   m_Layer: 0
   m_Name: astroidFactor 1
   m_TagString: Untagged
@@ -55,6 +56,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: 4
   colorUsingAssets: 0
+--- !u!114 &114116767731096208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592500190953560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a30b97447e319429a5542167fd1abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  factory: {fileID: 0}
 --- !u!114 &114838796539527290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71606a6aebe105c4aa646461f484c124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  astroid: {fileID: 1855102632904932, guid: 3a757db20ea1eec4a9df5b263de5db41, type: 2}
+  astroid: {fileID: 1493044479274970, guid: 3a757db20ea1eec4a9df5b263de5db41, type: 2}
   spawnTime: 2
   astroidCounter: 1
   spawnDiff: 0.5
