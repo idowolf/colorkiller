@@ -67,7 +67,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a30b97447e319429a5542167fd1abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  factory: {fileID: 0}
+  myMeteor: 0
+  meteorPrefabs:
+  - {fileID: 1802218051684350, guid: 20c32e21988c8794baaedce87d9a2efa, type: 2}
+  - {fileID: 1884258903686782, guid: 37acfbaae00aaca4582a60612ccab0a9, type: 2}
+  - {fileID: 1604597761090976, guid: 30e7d34b323210d4285cebaef462dbe3, type: 2}
+  - {fileID: 1609629058873852, guid: fd359b4cc0f32894687cd9ac7e1b8656, type: 2}
+  - {fileID: 1388580982584294, guid: 09ea9b99a7251124ea880a7ee6811390, type: 2}
+  random: 0
 --- !u!114 &114838796539527290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +97,8 @@ MonoBehaviour:
   degree: 0
   size: 1
   moveToCenter: 0
+  randomMeteor: 0
+  myMeteor: 0
   activation: 0
   disActivation: 0
 --- !u!212 &212509679065054544
