@@ -9,7 +9,7 @@ public enum MeteorNum
     Three,
     Four,
     Five,
-    Rand,
+    
 }
 
 public class MeteorType : MonoBehaviour {
@@ -26,28 +26,33 @@ public class MeteorType : MonoBehaviour {
 		
 	}
 
-
-    public void SetMeteorNum(MeteorNum meteor , bool isRand) {
+    /*
+    public void SetMeteorType(MeteorNum meteor , bool isRand) {
         factory = gameObject.GetComponent<astroidFactory>();
-        if (isRandom)
+        if (isRand)
         {
-            float temp = Random.Range(1, 5);
-            int tempInt = (int)temp;
+            float temp = Random.Range(1, 5.99f);
+            int tempInt = Mathf.FloorToInt(temp);
             switch (tempInt)
             {
                 case (1):
                     meteor = MeteorNum.One;
+                    break;
                 case (2):
                     meteor = MeteorNum.Two;
+                    break;
                 case (3):
                     meteor = MeteorNum.Three;
+                    break;
                 case (4):
                     meteor = MeteorNum.Four;
+                    break;
                 case (5):
                     meteor = MeteorNum.Five;
+                    break;
                
             }
-            factory.Mymeteor = meteor;
+            factory.astroid = meteor;
         }
-    }
+    } */
 }

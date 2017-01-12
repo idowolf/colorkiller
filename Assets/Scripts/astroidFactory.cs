@@ -20,11 +20,14 @@ public class astroidFactory : MonoBehaviour
     public float degree;                            // angele of launching
     public float size =1;                           // the size of the astroid (affects one's speed)
     public bool moveToCenter;
+
     public bool randomMeteor;
     public MeteorNum myMeteor;                     // type of astroid
 
     public int activation;                          // activate the factory after X number of astroids has been launched (totalAstroidsNum)
     public int disActivation;                       // disactivate the factory after X number of astroids has been launched (totalAstroidsNum)
+
+    astroidFactory factory;
     // Use this for initialization
     void Start()
     {
@@ -58,25 +61,32 @@ public class astroidFactory : MonoBehaviour
         float y1 = transform.position.y - rd.bounds.size.y / 2;
         float y2 = transform.position.y + rd.bounds.size.y / 2;
         Vector2 spawnPoint;
+        
+        //set spawn point to be random in the range or at the middle of it 
         spawnPoint = (randomSpawn ? new Vector2(transform.position.x, Random.Range(y1, y2)) :
             new Vector2(transform.position.x, (y1 + y2) / 2));
         //= new Vector2(transform.position.x , Random.Range(y1, y2));
         GameObject astroid1 = Instantiate(astroid, spawnPoint, Quaternion.identity);
+
+        //set meteor linear movement parameters
         astroid1.GetComponent<LinearMovement>().speed = speed;
         astroid1.GetComponent<LinearMovement>().moveToCenter = moveToCenter;
         astroid1.GetComponent<LinearMovement>().degree = degree;
-        astroid1.GetComponent<Transform>().localScale *= Random.Range((size-0.25f),(size+0.25f));
+
+        //set the meteor size 
+        float tempSizeFactor = Random.Range((size - 0.25f), (size + 0.25f));
+        astroid1.GetComponent<Transform>().localScale *=tempSizeFactor;
 
         //  set meteor Type (MeteorNum)
-        astroid1.GetComponent<MeteorType>().SetMeteorType(myMeteor , randomMeteor);
+        //astroid1.GetComponent<MeteorType>().SetMeteorType(myMeteor , randomMeteor);
+
         totalAstroidNum++;
-        score++;
+        //update score - size does matters
+        score+= Mathf.FloorToInt(tempSizeFactor * 10) ;
+        
         //  set meteor Color
         astroid1.GetComponent<ColoredObject>().SetColor(myColor);
         astroidCounter++;
-
-
-
-    }
-   
+        
+        }
 }
