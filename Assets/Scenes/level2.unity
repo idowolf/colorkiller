@@ -183,7 +183,7 @@ Prefab:
         type: 2}
       propertyPath: astroid
       value: 
-      objectReference: {fileID: 1855102632904932, guid: 3a757db20ea1eec4a9df5b263de5db41,
+      objectReference: {fileID: 1493044479274970, guid: 3a757db20ea1eec4a9df5b263de5db41,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
@@ -285,7 +285,7 @@ Prefab:
         type: 2}
       propertyPath: astroid
       value: 
-      objectReference: {fileID: 1855102632904932, guid: 3a757db20ea1eec4a9df5b263de5db41,
+      objectReference: {fileID: 1493044479274970, guid: 3a757db20ea1eec4a9df5b263de5db41,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
@@ -382,7 +382,7 @@ Prefab:
         type: 2}
       propertyPath: astroid
       value: 
-      objectReference: {fileID: 1855102632904932, guid: 3a757db20ea1eec4a9df5b263de5db41,
+      objectReference: {fileID: 1493044479274970, guid: 3a757db20ea1eec4a9df5b263de5db41,
         type: 2}
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
@@ -479,7 +479,7 @@ Prefab:
         type: 2}
       propertyPath: astroid
       value: 
-      objectReference: {fileID: 1855102632904932, guid: 3a757db20ea1eec4a9df5b263de5db41,
+      objectReference: {fileID: 1493044479274970, guid: 3a757db20ea1eec4a9df5b263de5db41,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
