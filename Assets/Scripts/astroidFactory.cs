@@ -75,8 +75,7 @@ public class astroidFactory : MonoBehaviour
         float tempSizeFactor = Random.Range((size - 0.25f), (size + 0.25f));
         astroid1.GetComponent<Transform>().localScale *=tempSizeFactor;
 
-        //  set meteor Type (MeteorNum)
-        //astroid1.GetComponent<MeteorType>().SetMeteorType(myMeteor , randomMeteor);
+        
 
         totalAstroidNum++;
         //update score - size does matters

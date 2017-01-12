@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class level1Logic : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
 
-    public string sceneName;
+    public int scoreToNext;               //score limit to finish level
+    public string nextSceneName;          //next level  
 
     // Use this for initialization
     void Start()
@@ -17,13 +18,13 @@ public class level1Logic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        changeLevel();
     }
     void changeLevel()
     {
-        if (astroidFactory.score >= 20)
+        if (astroidFactory.score >= scoreToNext)
         {
-            SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(nextSceneName);
         }
     }
 }
