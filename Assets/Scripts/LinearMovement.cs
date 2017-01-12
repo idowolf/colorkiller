@@ -9,7 +9,6 @@ public class LinearMovement : MonoBehaviour {
     public float speed;
     private Vector3 oldVelocity;
     public GameObject bullet;
-
     float leftConstraint = Screen.width;
     float rightConstraint = Screen.width;
     float bottomConstraint = Screen.height;
@@ -68,5 +67,4 @@ public class LinearMovement : MonoBehaviour {
             transform.position = new Vector3(transform.position.x, bottomConstraint - buffer, transform.position.z);
         }
     }
-
 }

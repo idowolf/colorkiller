@@ -13,6 +13,7 @@ public class BulletCtrl : MonoBehaviour
     public float yFinger;
     public string sceneName;
     private Vector3 oldVelocity;
+    public AudioClip audio;
 
 
     // Use this for initialization
@@ -48,7 +49,7 @@ public class BulletCtrl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.GetComponent<EnemyScript>() == null) { 
+        if (!isDestroyable(other.gameObject)) { 
         if (other.GetComponent<ColoredObject>() != null)
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
         if (other.gameObject.name.Equals("StartGameButton"))
@@ -59,9 +60,10 @@ public class BulletCtrl : MonoBehaviour
             if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
             {
                 Destroy(gameObject);
-                Destroy(other.gameObject);
-               
+                return;
             }
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
             // get the point of contact
 
             // reflect our old velocity off the contact point's normal vector
@@ -75,4 +77,15 @@ public class BulletCtrl : MonoBehaviour
         }
     }
 
+    public static bool isDestroyable(GameObject obj)
+    {
+        return obj.GetComponent<Destroyable>();
+    }
+
+    public static void FakeDestroy(GameObject obj)
+    {
+        obj.transform.localScale = new Vector3(0, 0, 0);
+        obj.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        obj.GetComponent<Collider2D>().enabled = false;
+    }
 }

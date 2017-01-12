@@ -10,6 +10,7 @@ public class Fire : MonoBehaviour
     private Vector3 dif;
     public float rotationSpeed;
     private bool shoot;
+    public AudioClip audio;
     // Use this for initialization
     void Start()
     {
@@ -46,6 +47,8 @@ public class Fire : MonoBehaviour
             instBullet.xFinger = x;
             instBullet.yFinger = y; 
             instBullet.bulletSpeed = 20;
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play();
             shoot = false;
         }
 
