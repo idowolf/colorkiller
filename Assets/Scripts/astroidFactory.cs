@@ -68,7 +68,7 @@ public class astroidFactory : MonoBehaviour
         astroid1.GetComponent<Transform>().localScale *= Random.Range((size-0.25f),(size+0.25f));
 
         //  set meteor Type (MeteorNum)
-        astroid1.GetComponent<MeteorType>().SetMeteorType(myMeteor);
+        astroid1.GetComponent<MeteorType>().SetMeteorType(myMeteor , randomMeteor);
         totalAstroidNum++;
         score++;
         //  set meteor Color
