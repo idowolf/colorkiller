@@ -61,9 +61,9 @@ Rigidbody2D:
   m_UseAutoMass: 1
   m_Mass: 5.027255
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 534724d6e95bac84fa443a883227b774, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -226,7 +226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ddf9df91f82aa84fb9de959ff56cf2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Particale: {fileID: 0}
 --- !u!212 &212837355884941180
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -258,7 +257,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 694800bf1e7205f49b83811a7d3dcb17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ffa368006c2f2f940bf4cb13cda05ed2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

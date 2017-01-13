@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114074383076593356}
   - component: {fileID: 114116767731096208}
   m_Layer: 0
-  m_Name: astroidFactor 1
+  m_Name: RightCont
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a30b97447e319429a5542167fd1abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  factory: {fileID: 0}
 --- !u!114 &114838796539527290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -90,6 +89,8 @@ MonoBehaviour:
   degree: 0
   size: 1
   moveToCenter: 0
+  randomMeteor: 0
+  myMeteor: 0
   activation: 0
   disActivation: 0
 --- !u!212 &212509679065054544

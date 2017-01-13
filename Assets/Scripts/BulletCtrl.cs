@@ -11,7 +11,6 @@ public class BulletCtrl : MonoBehaviour
     public float bulletSpeed;
     public float xFinger;
     public float yFinger;
-    public string sceneName;
     private Vector3 oldVelocity;
     public AudioClip audio;
 
@@ -52,8 +51,6 @@ public class BulletCtrl : MonoBehaviour
         if (!isDestroyable(other.gameObject)) { 
         if (other.GetComponent<ColoredObject>() != null)
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
-        if (other.gameObject.name.Equals("StartGameButton"))
-            SceneManager.LoadScene(sceneName);
         }
         else
         {
