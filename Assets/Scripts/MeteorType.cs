@@ -51,9 +51,6 @@ public class MeteorType : MonoBehaviour
             case MeteorNum.Four:
                 selectedMeteor = meteorPrefabs[3];
                 break;
-            case MeteorNum.Five:
-                selectedMeteor = meteorPrefabs[4];
-                break;
         }
     }
 
