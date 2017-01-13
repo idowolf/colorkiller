@@ -7,7 +7,8 @@ public enum MeteorNum
     One,
     Two,
     Three,
-    Four
+    Four,
+    
 }
 
 public class MeteorType : MonoBehaviour
