@@ -54,8 +54,7 @@ public class Destroyable : MonoBehaviour
         bool flg1 = BulletCtrl.isDestroyable(gameObject) && gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
         bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
         bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
-        bool flg4 = !other.GetComponent<FireParticleEffect>();
-        if ((flg1 || flg2 || flg3) && flg4)
+        if (flg1 || flg2 || flg3)
             initiateSelfDestruct = true;
     }
 }
