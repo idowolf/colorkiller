@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static int score;
+
     public int scoreToNext;               //score limit to finish level
     public string nextSceneName;          //next level  
 
@@ -18,12 +18,11 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         changeLevel();
     }
     void changeLevel()
     {
-        if (score >= scoreToNext)
+        if (astroidFactory.score >= scoreToNext)
         {
             SceneManager.LoadScene(nextSceneName);
         }

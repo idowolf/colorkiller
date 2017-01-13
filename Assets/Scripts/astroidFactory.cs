@@ -9,7 +9,7 @@ public class astroidFactory : MonoBehaviour
     public float spawnTime = 2;                     // rate of spawning 
     public int astroidCounter;                      // count astroids between spawnTime changes
     public static int totalAstroidNum = 0;          // count astroid per game
-    public static int points = 0;                           // managing player's points
+    public static int score = 0;                    // managing player's score
     public float spawnDiff;                         // control spawntime changes
     public int accelerationRate;                    // how many astroids untill next spawntime change
     public bool randomSpawn;                        // spawn in a random place on factory else from the middle of it
@@ -26,7 +26,6 @@ public class astroidFactory : MonoBehaviour
     public int disActivation;                       // disactivate the factory after X number of astroids has been launched (totalAstroidsNum)
 
     astroidFactory factory;
-    public float tempSizeFactor;
     // Use this for initialization
     void Start()
     {
@@ -46,16 +45,15 @@ public class astroidFactory : MonoBehaviour
             //astroidCounter = 1;
             spawnTime -= spawnDiff;
             astroidCounter++;
-            ScoreManager.score++;
-            
+            score++;
         }
     }
 
     void addAstroid()
     {
-        if (points < activation)
+        if (score < activation)
             return;
-        if (points > disActivation)
+        if (score > disActivation)
             GameObject.Destroy(gameObject);
         Renderer rd = GetComponent<Renderer>();
         float y1 = transform.position.y - rd.bounds.size.y / 2;
@@ -74,14 +72,14 @@ public class astroidFactory : MonoBehaviour
         astroid1.GetComponent<LinearMovement>().degree = degree;
 
         //set the meteor size 
-        tempSizeFactor = Random.Range((size - 0.25f), (size + 0.25f));
+        float tempSizeFactor = Random.Range((size - 0.25f), (size + 0.25f));
         astroid1.GetComponent<Transform>().localScale *=tempSizeFactor;
 
         
 
         totalAstroidNum++;
-        //update points - size does matters
-        //points += Mathf.FloorToInt(tempSizeFactor * 10) ;
+        //update score - size does matters
+        score+= Mathf.FloorToInt(tempSizeFactor * 10) ;
         
         //  set meteor Color
         astroid1.GetComponent<ColoredObject>().SetColor(myColor);
