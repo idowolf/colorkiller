@@ -59,6 +59,7 @@ public class BulletCtrl : MonoBehaviour
         {
             if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
             {
+                ScoreManager.score += other.GetComponent<Transform>().localScale
                 Destroy(gameObject);
                 return;
             }
