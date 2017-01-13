@@ -39,6 +39,7 @@ public class Farticle : MonoBehaviour {
     //}
     void CallMeMaybe(GameObject other)
     {
+        if (!other.GetComponent<FireParticleEffect>()) { 
         Particale = Resources.Load<ParticleSystem>("Ex_" + GetComponent<ColoredObject>().color.ToString().ToLower());
         bool flg1 = BulletCtrl.isDestroyable(gameObject) && GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
         bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
@@ -46,6 +47,7 @@ public class Farticle : MonoBehaviour {
         if (flg1 || flg2 || flg3)
         {
             InitParticle();
+        }
         }
     }
     void InitParticle()

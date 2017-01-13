@@ -51,10 +51,14 @@ public class Destroyable : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        bool flg1 = BulletCtrl.isDestroyable(gameObject) && gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
-        bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
-        bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
-        if (flg1 || flg2 || flg3)
-            initiateSelfDestruct = true;
+        if (!other.GetComponent<FireParticleEffect>())
+        {
+
+            bool flg1 = BulletCtrl.isDestroyable(gameObject) && gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
+            bool flg2 = BulletCtrl.isDestroyable(gameObject) && other.GetComponent<SpaceshipScript>();
+            bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
+            if (flg1 || flg2 || flg3)
+                initiateSelfDestruct = true;
+        }
     }
 }
