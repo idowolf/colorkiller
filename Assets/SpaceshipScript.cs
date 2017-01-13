@@ -34,7 +34,7 @@ public class SpaceshipScript : MonoBehaviour {
     public IEnumerator selfDestruct()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("Scenes/GameOver");
         GameObject.Destroy(gameObject);
     }
 }
