@@ -21,7 +21,7 @@ public class MeteorType : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        ChooseMeteor(myMeteor, true);
+        ChooseMeteor(myMeteor, random);
     }
 
     // Update is called once per frame
