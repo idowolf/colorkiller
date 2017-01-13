@@ -70,12 +70,16 @@ public static class SimplePool {
         }
 
         // Spawn an object from our pool
-        public GameObject Spawn(Vector3 pos, Quaternion rot) {
+        public GameObject Spawn(Vector3 pos, Quaternion rot, GameObject caller) {
             GameObject obj;
+            Transform callerTransform = caller.transform;
             if(inactive.Count==0) {
                 // We don't have an object in our pool, so we
                 // instantiate a whole new object.
-                obj = (GameObject)GameObject.Instantiate(prefab, pos, rot);
+                obj = (GameObject)GameObject.Instantiate(prefab, pos, rot, callerTransform);
+                float localScaleFactor = obj.transform.localScale.x * 0.4f / obj.transform.lossyScale.x;
+
+                obj.transform.localScale = new Vector3(localScaleFactor, localScaleFactor, localScaleFactor);
                 obj.name = prefab.name + " ("+(nextId++)+")";
 
                 // Add a PoolMember component so we know what pool
@@ -95,7 +99,7 @@ public static class SimplePool {
                     //     if you really don't want this.
                     // No worries -- we'll just try the next one in our sequence.
 
-                    return Spawn(pos, rot);
+                    return Spawn(pos, rot, caller);
                 }
             }
 
@@ -152,13 +156,13 @@ public static class SimplePool {
     /// Spawn/Despawn sequence is going to be pretty darn quick and
     /// this avoids code duplication.
     /// </summary>
-    static public void Preload(GameObject prefab, int qty = 1) {
+    static public void Preload(GameObject prefab, GameObject caller, int qty = 1) {
         Init(prefab, qty);
 
         // Make an array to grab the objects we're about to pre-spawn.
         GameObject[] obs = new GameObject[qty];
         for (int i = 0; i < qty; i++) {
-            obs[i] = Spawn (prefab, Vector3.zero, Quaternion.identity);
+            obs[i] = Spawn (prefab, Vector3.zero, Quaternion.identity, caller);
         }
 
         // Now despawn them all.
@@ -174,10 +178,10 @@ public static class SimplePool {
     /// after spawning -- but remember that toggling IsActive will also
     /// call that function.
     /// </summary>
-    static public GameObject Spawn(GameObject prefab, Vector3 pos, Quaternion rot) {
+    static public GameObject Spawn(GameObject prefab, Vector3 pos, Quaternion rot, GameObject caller) {
         Init(prefab);
 
-        return pools[prefab].Spawn(pos, rot);
+        return pools[prefab].Spawn(pos, rot, caller);
     }
 
     /// <summary>

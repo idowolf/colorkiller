@@ -23,13 +23,13 @@ public class FireParticleEffect : MonoBehaviour {
         while( timeSinceLastSpawn > correctTimeBetweenSpawns )
         {
             // Time to spawn a particle
-            SpawnFireAlongOutline();
+            SpawnFireAlongOutline(gameObject);
             timeSinceLastSpawn -= correctTimeBetweenSpawns;
         }
 
 	}
 
-    void SpawnFireAlongOutline()
+    void SpawnFireAlongOutline(GameObject caller)
     {
 
         PolygonCollider2D col = GetComponent<PolygonCollider2D>();
@@ -43,14 +43,14 @@ public class FireParticleEffect : MonoBehaviour {
         Vector2 pointA = points[ pointIndex ];
         Vector2 pointB = points[ (pointIndex+1) % points.Length ];
         float i = col.transform.parent.transform.localScale.x;
-        Vector2 spawnPoint = Vector2.Lerp(pointA*i, pointB*i, Random.Range(0f, i));
+        Vector2 spawnPoint = Vector2.Lerp(pointA, pointB, Random.Range(0f, i));
 
-        SpawnFireAtPosition(spawnPoint + (Vector2)this.transform.position);
+        SpawnFireAtPosition(spawnPoint + (Vector2)this.transform.position, caller);
     }
 
-    void SpawnFireAtPosition(Vector2 position)
+    void SpawnFireAtPosition(Vector2 position,GameObject caller)
     {
-        SimplePool.Spawn(ParticlePrefab, position, Quaternion.identity);
+        SimplePool.Spawn(ParticlePrefab, position, Quaternion.identity, caller);
 
     }
 }
