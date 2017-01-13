@@ -237,7 +237,7 @@ Prefab:
         type: 2}
       propertyPath: astroid
       value: 
-      objectReference: {fileID: 1929250933863110, guid: d31213c2dd6104c46a866bf9a606eb20,
+      objectReference: {fileID: 1609629058873852, guid: fd359b4cc0f32894687cd9ac7e1b8656,
         type: 2}
     - target: {fileID: 212509679065054544, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
@@ -349,7 +349,7 @@ Prefab:
         type: 2}
       propertyPath: astroid
       value: 
-      objectReference: {fileID: 1929250933863110, guid: d31213c2dd6104c46a866bf9a606eb20,
+      objectReference: {fileID: 1609629058873852, guid: fd359b4cc0f32894687cd9ac7e1b8656,
         type: 2}
     - target: {fileID: 212509679065054544, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
