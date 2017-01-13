@@ -41,9 +41,9 @@ public class Fire : MonoBehaviour
             // Create a new bullet at “transform.position” 
             // Which is the current position of the ship
             //Quaternion.identity = add the bullet with no rotation
-            float x = 4.25576412f * Mathf.Cos((rotZ + 180) * Mathf.Deg2Rad);
-            float y = 4.25576412f * Mathf.Sin((rotZ + 180) * Mathf.Deg2Rad);
-            BulletCtrl instBullet = GameObject.Instantiate(bullet, offsetPosition(0, 0), Quaternion.identity);
+            float x = 1f * Mathf.Cos((rotZ + 180) * Mathf.Deg2Rad);
+            float y = 1f * Mathf.Sin((rotZ + 180) * Mathf.Deg2Rad);
+            BulletCtrl instBullet = GameObject.Instantiate(bullet, offsetPosition(x, y), Quaternion.identity);
             instBullet.xFinger = x;
             instBullet.yFinger = y; 
             instBullet.bulletSpeed = 20;

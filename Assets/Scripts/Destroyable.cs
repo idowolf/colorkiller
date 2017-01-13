@@ -36,8 +36,6 @@ public class Destroyable : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
-            initiateSelfDestruct = true;
         // get the point of contact
         ContactPoint2D contact = other.contacts[0];
 
@@ -47,8 +45,8 @@ public class Destroyable : MonoBehaviour
         // assign the reflected velocity back tohe rigidbody
         r2d.velocity = reflectedVelocity;
         // rotate the object by the same ammount we changed its velocity
-        Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
-        transform.rotation = rotation * transform.rotation;
+        //Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
+        //transform.rotation = rotation * transform.rotation;
     }
 
     void OnTriggerEnter2D(Collider2D other)

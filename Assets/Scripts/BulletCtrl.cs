@@ -11,7 +11,6 @@ public class BulletCtrl : MonoBehaviour
     public float bulletSpeed;
     public float xFinger;
     public float yFinger;
-    public string sceneName;
     private Vector3 oldVelocity;
     public AudioClip audio;
 
@@ -52,8 +51,6 @@ public class BulletCtrl : MonoBehaviour
         if (!isDestroyable(other.gameObject)) { 
         if (other.GetComponent<ColoredObject>() != null)
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
-        if (other.gameObject.name.Equals("StartGameButton"))
-            SceneManager.LoadScene(sceneName);
         }
         else
         {
@@ -85,7 +82,8 @@ public class BulletCtrl : MonoBehaviour
     public static void FakeDestroy(GameObject obj)
     {
         obj.transform.localScale = new Vector3(0, 0, 0);
-        obj.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        if(obj.GetComponent<Rigidbody2D>())
+            obj.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         obj.GetComponent<Collider2D>().enabled = false;
     }
 }

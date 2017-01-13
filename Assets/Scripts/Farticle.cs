@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Farticle : MonoBehaviour {
 
-    public ParticleSystem Particale;
+    private ParticleSystem Particale;
     // Use this for initialization
 
     
     void Start ()
     {
+        Particale = Resources.Load("Ex_white") as ParticleSystem;
 	}
 
     // Update is called once per frame
@@ -32,10 +33,10 @@ public class Farticle : MonoBehaviour {
         CallMeMaybe(other.gameObject);
      }
     
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        CallMeMaybe(other.gameObject);
-    }
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    CallMeMaybe(other.gameObject);
+    //}
     void CallMeMaybe(GameObject other)
     {
         Particale = Resources.Load<ParticleSystem>("Ex_" + GetComponent<ColoredObject>().color.ToString().ToLower());

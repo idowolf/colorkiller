@@ -23,7 +23,7 @@ public class SpaceshipScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
+        bool flg3 = other.GetComponent<EnemyScript>();
         if (flg3)
         {
             initiateSelfDestruct = true;
@@ -33,6 +33,7 @@ public class SpaceshipScript : MonoBehaviour {
 
     public IEnumerator selfDestruct()
     {
+        GameObject.Find("ThrustEffect").GetComponent<ParticleSystem>().Stop();
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("GameOver");
         GameObject.Destroy(gameObject);
