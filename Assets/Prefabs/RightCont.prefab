@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114838796539527290}
   - component: {fileID: 114074383076593356}
   - component: {fileID: 114116767731096208}
+  - component: {fileID: 114464334930017056}
   m_Layer: 0
   m_Name: astroidFactor 1
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592500190953560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -37.51, y: 0.31, z: -2.6503906}
+  m_LocalPosition: {x: 41.3, y: 0.31, z: -2.6503906}
   m_LocalScale: {x: 0.2, y: -23.68, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,6 +76,19 @@ MonoBehaviour:
   - {fileID: 1609629058873852, guid: fd359b4cc0f32894687cd9ac7e1b8656, type: 2}
   - {fileID: 1388580982584294, guid: 09ea9b99a7251124ea880a7ee6811390, type: 2}
   random: 0
+--- !u!114 &114464334930017056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1592500190953560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b63ebffe57747d4494d9307ff15941a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreToNext: 0
+  nextSceneName: 
 --- !u!114 &114838796539527290
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,21 +100,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71606a6aebe105c4aa646461f484c124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  astroid: {fileID: 1493044479274970, guid: 3a757db20ea1eec4a9df5b263de5db41, type: 2}
   spawnTime: 2
   astroidCounter: 1
-  spawnDiff: 0.5
-  accelerationRate: 3
+  spawnDiff: 0.3
+  accelerationRate: 30
   randomSpawn: 1
-  myColor: 0
-  speed: 0
-  degree: 0
-  size: 1
+  myColor: 4
+  speed: 2
+  degree: 270
+  size: 1.8
   moveToCenter: 0
   randomMeteor: 0
   myMeteor: 0
   activation: 0
-  disActivation: 0
+  disActivation: 2222222
 --- !u!212 &212509679065054544
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -133,6 +146,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 57d012e674a349646b1516bb4d15a570, type: 3}
-  m_Color: {r: 0.208, g: 0.886, b: 0.953, a: 1}
+  m_Color: {r: 0.121568635, g: 0.57254905, b: 0.6156863, a: 1}
   m_FlipX: 0
   m_FlipY: 0
