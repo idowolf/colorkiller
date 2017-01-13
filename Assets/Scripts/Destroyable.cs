@@ -45,8 +45,8 @@ public class Destroyable : MonoBehaviour
         // assign the reflected velocity back tohe rigidbody
         r2d.velocity = reflectedVelocity;
         // rotate the object by the same ammount we changed its velocity
-        Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
-        transform.rotation = rotation * transform.rotation;
+        //Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
+        //transform.rotation = rotation * transform.rotation;
     }
 
     void OnTriggerEnter2D(Collider2D other)

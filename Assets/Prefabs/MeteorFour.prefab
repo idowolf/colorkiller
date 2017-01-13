@@ -61,13 +61,13 @@ Rigidbody2D:
   m_UseAutoMass: 1
   m_Mass: 4.877511
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 0.1
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 534724d6e95bac84fa443a883227b774, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &70042683566095722
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupID: 0
-  initiateSelfDestruct: 0
+  initiateSelfDestruct: 1
 --- !u!114 &114628915016489002
 MonoBehaviour:
   m_ObjectHideFlags: 1
