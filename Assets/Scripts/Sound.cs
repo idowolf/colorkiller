@@ -19,8 +19,6 @@ public class Sound : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        bool flg4 = !other.GetComponent<FireParticleEffect>();
-        if (flg4) { 
         bool flg1 = BulletCtrl.isDestroyable(gameObject) && gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color;
         bool flg2 = other.GetComponent<SpaceshipScript>();
 
@@ -29,7 +27,6 @@ public class Sound : MonoBehaviour {
         {
             AudioSource audio = GetComponent<AudioSource>();
             audio.Play();
-        }
         }
     }
 }
