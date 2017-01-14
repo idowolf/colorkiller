@@ -27,6 +27,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (ScoreManager.score >= scoreToNext)
         {
+            Debug.Log(ScoreManager.score.ToString());
             SceneManager.LoadScene(nextSceneName);
         }
     }
