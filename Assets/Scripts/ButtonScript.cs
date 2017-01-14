@@ -30,8 +30,16 @@ public class ButtonScript : MonoBehaviour {
         bool flg3 = GetComponent<SpaceshipScript>() && other.GetComponent<EnemyScript>();
         if (flg1 || flg2 || flg3)
         {
-            SceneManager.LoadScene(sceneName);
+            StartCoroutine(WaitForIt(0.99F));
+            Debug.Log("TEST");
+            //SceneManager.LoadScene(sceneName);
         }
+    }
+
+    IEnumerator WaitForIt(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(sceneName);
     }
 }
 
