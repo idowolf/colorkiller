@@ -9,7 +9,7 @@ public class powerupFactory : MonoBehaviour
     public float spawnTime = 2;                     // rate of spawning 
     public int powerupCounter;                      // count astroids between spawnTime changes
     public static int totalPowerupNum = 0;          // count astroid per game
-    public static int score = 0;                    // managing player's score
+    //public static int score = 0;                    // managing player's score
     public float spawnDiff;                         // control spawntime changes
     public int accelerationRate;                    // how many astroids untill next spawntime change
     public bool randomSpawn;                        // spawn in a random place on factory else from the middle of it
@@ -23,7 +23,6 @@ public class powerupFactory : MonoBehaviour
 
     public int activation;                          // activate the factory after X number of astroids has been launched (totalAstroidsNum)
     public int disActivation;                       // disactivate the factory after X number of astroids has been launched (totalAstroidsNum)
-
     astroidFactory factory;
     // Use this for initialization
     void Start()
@@ -44,15 +43,15 @@ public class powerupFactory : MonoBehaviour
             //astroidCounter = 1;
             spawnTime -= spawnDiff;
             powerupCounter++;
-            score++;
+            
         }
     }
 
     void addPowerup()
     {
-        if (score < activation)
+        if (astroidFactory.score < activation)
             return;
-        if (score > disActivation)
+        if (astroidFactory.score > disActivation)
             GameObject.Destroy(gameObject);
         Renderer rd = GetComponent<Renderer>();
         float y1 = transform.position.y - rd.bounds.size.y / 2;
@@ -71,18 +70,18 @@ public class powerupFactory : MonoBehaviour
         astroid1.GetComponent<LinearMovement>().degree = degree;
 
         //set the powerup size 
-        float tempSizeFactor = Random.Range((size - 0.25f), (size + 0.25f));
-        astroid1.GetComponent<Transform>().localScale *=tempSizeFactor;
+
+        astroid1.GetComponent<Transform>().localScale *= size;
 
         
 
         totalPowerupNum++;
-        //update score - size does matters
-        score+= Mathf.FloorToInt(tempSizeFactor * 10) ;
+        
         
         //  set powerup Color
         astroid1.GetComponent<ColoredObject>().SetColor(myColor);
         powerupCounter++;
+        astroidFactory.score++;
         
         }
 }
