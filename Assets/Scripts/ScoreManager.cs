@@ -33,7 +33,7 @@ public class ScoreManager : MonoBehaviour
 
     void setScoreText()
     {
-        scoreText.text = "SCORE : " + ScoreManager.score.ToString();
+        scoreText.text = "SCORE : " + (ScoreManager.score*(10)).ToString();
     }
     
 }
