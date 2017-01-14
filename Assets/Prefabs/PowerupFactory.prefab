@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myPowerup: 0
   powerupPrefabs:
-  - {fileID: 1041074344874026, guid: 0f61175047693344cabc5604e11a180f, type: 2}
+  - {fileID: 1854535131149328, guid: 0f61175047693344cabc5604e11a180f, type: 2}
   - {fileID: 1940845927937788, guid: b97c6f375442c6242a92223eb54b2de1, type: 2}
   - {fileID: 1046795947933858, guid: 98b2e7873fdbb4943ba71abd29101333, type: 2}
   - {fileID: 1662799725199154, guid: 252a6fd509640624bbd2b553a16ade09, type: 2}
