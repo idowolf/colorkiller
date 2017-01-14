@@ -55,6 +55,6 @@ public class ColoredObject : MonoBehaviour {
                 ren.color = drawColor;
             return;
         }
-        ren.sprite = Resources.Load<Sprite>(ren.sprite.name.Split(' ')[0] + "_" + color.ToString().ToLower());
-    }
+        ren.sprite = Resources.Load<Sprite>(ren.sprite.name.Split('_')[0] + "_" + color.ToString().ToLower());
+        }
 }
