@@ -27,7 +27,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (ScoreManager.score >= scoreToNext)
         {
-            Debug.Log(ScoreManager.score.ToString());
+            astroidFactory.score = 0;
             SceneManager.LoadScene(nextSceneName);
         }
     }

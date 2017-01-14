@@ -128,7 +128,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 1592500190953560, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_Name
@@ -234,7 +234,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1592500190953560, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_Name
@@ -286,7 +286,7 @@ Prefab:
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: size
-      value: 1
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
@@ -303,6 +303,16 @@ Prefab:
         type: 2}
       propertyPath: moveToCenter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
+        type: 2}
+      propertyPath: randSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114116767731096208, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
+        type: 2}
+      propertyPath: myMeteor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
@@ -344,7 +354,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1592500190953560, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_Name
@@ -396,7 +406,7 @@ Prefab:
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: size
-      value: 1
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
@@ -417,7 +427,12 @@ Prefab:
     - target: {fileID: 114116767731096208, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: myMeteor
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
+        type: 2}
+      propertyPath: randSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
@@ -521,7 +536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1592500190953560, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_Name
@@ -696,7 +711,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_LocalScale.y
@@ -791,7 +806,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1090,7 +1105,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1592500190953560, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_Name
@@ -1142,7 +1157,7 @@ Prefab:
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: size
-      value: 1
+      value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
@@ -1158,6 +1173,11 @@ Prefab:
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: moveToCenter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
+        type: 2}
+      propertyPath: randSize
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1200,12 +1220,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4185531885610392, guid: 618f54706ed82524d9172049c89414eb, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
       propertyPath: scoreToNext
-      value: 260
+      value: 490
       objectReference: {fileID: 0}
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
@@ -1291,7 +1311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -17.66, y: -9.35}
+  m_AnchoredPosition: {x: -17.659973, y: -9.350006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &1830962193
@@ -1618,5 +1638,5 @@ Transform:
   m_Children:
   - {fileID: 547007674}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
