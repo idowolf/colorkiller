@@ -6,16 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/level2-intro.unity
+  - enabled: 1
     path: Assets/Scenes/ColorSwitch.unity
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
   - enabled: 1
     path: Assets/Scenes/menu.unity
   - enabled: 1
-    path: Assets/Scenes/level4.unity
+    path: Assets/Scenes/level5.unity
   - enabled: 1
     path: Assets/Scenes/level1.unity
   - enabled: 1
-    path: Assets/Scenes/level2.unity
+    path: Assets/Scenes/level6.unity
   - enabled: 1
-    path: Assets/Scenes/level5.unity
+    path: Assets/Scenes/level2.unity
