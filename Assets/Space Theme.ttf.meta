@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a7389e34664747345a5bd86a76e9bbfb
+timeCreated: 1484401071
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Space Theme
+  fontNames:
+  - Space Theme
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
