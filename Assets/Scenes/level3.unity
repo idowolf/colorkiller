@@ -142,7 +142,7 @@ Prefab:
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: size
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
@@ -199,6 +199,11 @@ Prefab:
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 91.100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
+        type: 2}
+      propertyPath: randSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
@@ -863,12 +868,12 @@ Prefab:
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: speed
-      value: 1.3
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: size
-      value: 0.7
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
@@ -921,6 +926,11 @@ Prefab:
         type: 2}
       propertyPath: spawnDiff
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
+        type: 2}
+      propertyPath: randSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
@@ -1214,6 +1224,11 @@ Prefab:
     - target: {fileID: 4407355572943188, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 91.100006
+      objectReference: {fileID: 0}
+    - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
+        type: 2}
+      propertyPath: randSize
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}

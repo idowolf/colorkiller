@@ -146,7 +146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -11.7
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -175,12 +175,12 @@ Prefab:
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
       propertyPath: disActivation
-      value: 35
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
       propertyPath: activation
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
@@ -194,7 +194,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalScale.y
-      value: -2.44
+      value: -10.1
       objectReference: {fileID: 0}
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
@@ -214,7 +214,7 @@ Prefab:
     - target: {fileID: 114470481464928934, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
       propertyPath: myPowerup
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
@@ -345,11 +345,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -19.68
+      value: -40.82
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 16.8
+      value: 12.6
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalPosition.z
@@ -378,7 +378,7 @@ Prefab:
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
       propertyPath: disActivation
-      value: 25
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
@@ -397,7 +397,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4407355572943188, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
       propertyPath: m_LocalScale.y
-      value: -2.44
+      value: -12.68
       objectReference: {fileID: 0}
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
@@ -417,7 +417,7 @@ Prefab:
     - target: {fileID: 114470481464928934, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
       propertyPath: myPowerup
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114524541241903466, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
         type: 2}
@@ -1029,7 +1029,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: a7389e34664747345a5bd86a76e9bbfb, type: 3}
     m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
@@ -1063,7 +1063,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -17.66, y: -9.35}
+  m_AnchoredPosition: {x: -17.659973, y: -9.350006}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!1001 &1710672035
@@ -1275,7 +1275,7 @@ Prefab:
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
       propertyPath: nextSceneName
-      value: level4
+      value: level5
       objectReference: {fileID: 0}
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
