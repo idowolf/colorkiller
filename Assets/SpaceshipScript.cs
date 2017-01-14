@@ -37,5 +37,6 @@ public class SpaceshipScript : MonoBehaviour {
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("GameOver");
         GameObject.Destroy(gameObject);
+        ScoreManager.score = 0;
     }
 }
