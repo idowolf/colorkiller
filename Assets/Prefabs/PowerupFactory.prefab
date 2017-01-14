@@ -70,12 +70,12 @@ MonoBehaviour:
   myPowerup: 0
   powerupPrefabs:
   - {fileID: 1041074344874026, guid: 0f61175047693344cabc5604e11a180f, type: 2}
-  - {fileID: 1003906693964032, guid: 06dd262fe6020464290ae8957e0122d6, type: 2}
+  - {fileID: 1940845927937788, guid: b97c6f375442c6242a92223eb54b2de1, type: 2}
   - {fileID: 1046795947933858, guid: 98b2e7873fdbb4943ba71abd29101333, type: 2}
-  - {fileID: 1250658660043872, guid: 7b60218b91ce58a478b7ea9cebaaefd4, type: 2}
-  - {fileID: 1041074344874026, guid: e39ba6eed93d58c4bbeeb68e6f0ab575, type: 2}
-  - {fileID: 1020544213311872, guid: bbab443f7bc03c9448a896e0bec4cec1, type: 2}
-  - {fileID: 1820535262327742, guid: b927cb82fd27a57448cd4a9fffc4313c, type: 2}
+  - {fileID: 1662799725199154, guid: 252a6fd509640624bbd2b553a16ade09, type: 2}
+  - {fileID: 1096664279473364, guid: 7b60218b91ce58a478b7ea9cebaaefd4, type: 2}
+  - {fileID: 1817009360391688, guid: e466a319c81b6b64da8c1c044bb1faec, type: 2}
+  - {fileID: 1459989545672404, guid: f8fa00f508db35f4e8f9199c1073dd70, type: 2}
   random: 0
 --- !u!114 &114524541241903466
 MonoBehaviour:
