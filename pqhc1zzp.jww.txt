@@ -1,0 +1,77 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+# Conflicts:
+#	Assets/Scenes/level1.unity
+#	Assets/Scenes/level2.unity
+#	Assets/Scenes/level5.unity
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 2 and 16 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	new file:   Assets/FireParticle.cs
+#	new file:   Assets/FireParticle.cs.meta
+#	new file:   Assets/FireParticleEffect.cs
+#	new file:   Assets/FireParticleEffect.cs.meta
+#	new file:   Assets/Images.meta
+#	new file:   Assets/Images/CREDITS.txt
+#	new file:   Assets/Images/CREDITS.txt.meta
+#	new file:   Assets/Images/FireParticle.psd
+#	new file:   Assets/Images/FireParticle.psd.meta
+#	new file:   Assets/Images/Running Character.prefab
+#	new file:   Assets/Images/Running Character.prefab.meta
+#	new file:   Assets/Images/Running Character.psd
+#	new file:   Assets/Images/Running Character.psd.meta
+#	new file:   Assets/Images/castleCenter.png
+#	new file:   Assets/Images/castleCenter.png.meta
+#	new file:   Assets/Images/old sarasprites summary.PNG
+#	new file:   Assets/Images/old sarasprites summary.PNG.meta
+#	new file:   Assets/Images/unity-logo-white.png
+#	new file:   Assets/Images/unity-logo-white.png.meta
+#	new file:   Assets/Images/unity-logo.png
+#	new file:   Assets/Images/unity-logo.png.meta
+#	new file:   Assets/Materials/Sprites-Additive.mat
+#	new file:   Assets/Materials/Sprites-Additive.mat.meta
+#	new file:   Assets/Materials/Sprites-Additive.shader
+#	new file:   Assets/Materials/Sprites-Additive.shader.meta
+#	new file:   Assets/New Material.mat
+#	new file:   Assets/New Material.mat.meta
+#	new file:   Assets/Prefabs/FireParticle-Red.prefab
+#	new file:   Assets/Prefabs/FireParticle-Red.prefab.meta
+#	modified:   Assets/Prefabs/FourColorSpaceship 1.prefab
+#	modified:   Assets/Prefabs/MeteorFive.prefab
+#	modified:   Assets/Prefabs/MeteorFour.prefab
+#	modified:   Assets/Prefabs/MeteorOne.prefab
+#	modified:   Assets/Prefabs/MeteorThree.prefab
+#	modified:   Assets/Prefabs/MeteorTwo.prefab
+#	new file:   Assets/Prefabs/Running Character.prefab
+#	new file:   Assets/Prefabs/Running Character.prefab.meta
+#	new file:   Assets/Resources/FireParticle.psd
+#	new file:   Assets/Resources/FireParticle.psd.meta
+#	modified:   Assets/Scenes/ColorSwitch.unity
+#	modified:   Assets/Scripts/Destroyable.cs
+#	modified:   Assets/Scripts/Farticle.cs
+#	modified:   Assets/Scripts/Sound.cs
+#	new file:   Assets/SimplePool.cs
+#	new file:   Assets/SimplePool.cs.meta
+#	new file:   Assets/Sprites-Additive.mat
+#	new file:   Assets/Sprites-Additive.mat.meta
+#	new file:   Assets/Sprites-Additive.shader
+#	new file:   Assets/Sprites-Additive.shader.meta
+#	new file:   Assets/_SCENE_.unity
+#	new file:   Assets/_SCENE_.unity.meta
+#	modified:   ProjectSettings/TagManager.asset
+#
+

@@ -16,6 +16,7 @@ public class astroidFactory : MonoBehaviour
     public ObjectColor myColor;                     // astroid color
     public float speed;                             // astroids speed from this instance of astroidFactory
     public float degree;                            // angele of launching
+    public bool randSize = true;
     public float size =1;                           // the size of the astroid (affects one's speed)
     public bool moveToCenter;
 
@@ -46,6 +47,7 @@ public class astroidFactory : MonoBehaviour
             spawnTime -= spawnDiff;
             astroidCounter++;
             score++;
+            ScoreManager.score++;
         }
     }
 
@@ -71,9 +73,11 @@ public class astroidFactory : MonoBehaviour
         astroid1.GetComponent<LinearMovement>().moveToCenter = moveToCenter;
         astroid1.GetComponent<LinearMovement>().degree = degree;
 
-        //set the meteor size 
-        float tempSizeFactor = Random.Range((size - 0.25f), (size + 0.25f));
-        astroid1.GetComponent<Transform>().localScale *=tempSizeFactor;
+        //set the meteor size
+
+        float tempSizeFactor = randSize ? Random.Range((size - 0.25f), (size + 0.25f)) : size;
+        astroid1.GetComponent<Transform>().localScale *= tempSizeFactor;
+        
 
         
 

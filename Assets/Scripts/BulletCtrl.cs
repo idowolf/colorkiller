@@ -56,6 +56,9 @@ public class BulletCtrl : MonoBehaviour
         {
             if (gameObject.GetComponent<ColoredObject>().color == other.gameObject.GetComponent<ColoredObject>().color)
             {
+                int instSize = (int)other.GetComponent<Transform>().localScale.x;
+                ScoreManager.score += instSize;  //score up when astroid destryed
+                Debug.Log(ScoreManager.score.ToString());
                 Destroy(gameObject);
                 return;
             }

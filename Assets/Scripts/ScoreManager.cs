@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-
+    public static long score;
     public int scoreToNext;               //score limit to finish level
     public string nextSceneName;          //next level  
 
