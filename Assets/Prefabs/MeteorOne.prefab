@@ -61,13 +61,13 @@ Rigidbody2D:
   m_UseAutoMass: 1
   m_Mass: 6.970187
   m_LinearDrag: 0
-  m_AngularDrag: 0.1
+  m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 534724d6e95bac84fa443a883227b774, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 0
 --- !u!70 &70565899903134866
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -222,9 +222,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3801afa9564b6e4cbf7f53ecdc61aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  degree: 0
+  degree: 190
   moveToCenter: 0
-  speed: 0
+  speed: 20
   bullet: {fileID: 0}
 --- !u!212 &212624389838150152
 SpriteRenderer:
