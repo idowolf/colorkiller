@@ -33,6 +33,7 @@ public class astroidFactory : MonoBehaviour
 
         InvokeRepeating("addAstroid", 0, spawnTime);
         astroidCounter = 1;
+        score = 0;
 
 
     }

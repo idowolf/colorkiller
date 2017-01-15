@@ -38,6 +38,7 @@ public class ScoreManager : MonoBehaviour
                 if (overrideSettingsScene != "" && amIOnPC)
                     PassageMovement.passedArgument = overrideSettingsScene;
                 else
+                    astroidFactory.score = 0;
                     PassageMovement.passedArgument = nextSceneName; StartCoroutine(changeScene());
             }
         }
