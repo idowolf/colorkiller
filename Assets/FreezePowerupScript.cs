@@ -19,6 +19,8 @@ public class FreezePowerupScript : Destroyable
     {
         if (!stillActive)
         {
+            Instantiate(Resources.Load("PowerupTimer") as GameObject);
+
             stillActive = true;
             powerups = FindObjectsOfType(typeof(Destroyable)) as Destroyable[];
 

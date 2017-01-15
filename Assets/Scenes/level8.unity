@@ -145,6 +145,11 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 754867589}
+    - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
+        type: 2}
+      propertyPath: sceneName
+      value: credits
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 618f54706ed82524d9172049c89414eb, type: 2}
   m_IsPrefabParent: 0

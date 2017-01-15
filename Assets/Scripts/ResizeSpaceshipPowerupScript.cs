@@ -22,7 +22,9 @@ public class ResizeSpaceshipPowerupScript : Destroyable
 
         if (!stillActive)
         {
-            
+            Debug.Log("Hi Ido");
+            GameObject.Instantiate(Resources.Load("PowerupTimer"));
+            Debug.Log("Hi Ido2");
             stillActive = true;
             spaceship = FindObjectOfType(typeof(SpaceshipScript)) as SpaceshipScript;
             prevScale = spaceship.gameObject.transform.localScale;

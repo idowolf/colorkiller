@@ -336,6 +336,11 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 199881301}
+    - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
+        type: 2}
+      propertyPath: sceneName
+      value: level8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 618f54706ed82524d9172049c89414eb, type: 2}
   m_IsPrefabParent: 0
@@ -1341,7 +1346,7 @@ Transform:
   m_Children:
   - {fileID: 2007651911}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1844805042
 Prefab:
