@@ -42,7 +42,7 @@ public class ButtonScript : MonoBehaviour {
                 (Instantiate(Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
                 yield return null;
             }
-            if (sceneName == "credits")
+            if (sceneName == "credits" || sceneName == "menu")
                 SceneManager.LoadScene(sceneName);
             else
                 SceneManager.LoadScene("passage");
