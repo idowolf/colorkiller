@@ -566,8 +566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8aed87fd97a9474d8e98f7b55f27092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 2
-  androidRotSpeed: 5
+  rotSpeed: 6
+  androidRotSpeed: 7
 --- !u!114 &114144746219411496
 MonoBehaviour:
   m_ObjectHideFlags: 1
