@@ -66,6 +66,8 @@ public class ScoreManager : MonoBehaviour
             (Instantiate (Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color= Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
             yield return null;
         }
+            if (sceneName == "settings")
+                TiltSettingScript.callerScene = SceneManager.GetActiveScene().name;
             if (sceneName == "credits" || sceneName == "menu" || sceneName == "settings" || sceneName == "settingsPC")
                 SceneManager.LoadScene(PassageMovement.passedArgument);
             else
