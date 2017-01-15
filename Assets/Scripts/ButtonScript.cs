@@ -5,30 +5,53 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour {
 
-    public string sceneName;
+    public string sceneName;          //next level  
+    public string overrideSettingsScene;
+    private bool amIOnPC;
+    private bool changing;
     // Use this for initialization
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+#if UNITY_ANDROID
+        amIOnPC = true;
+#endif
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-            StartCoroutine(WaitForIt(0.99F));
-            Debug.Log("TEST");
-            SceneManager.LoadScene(sceneName);
+        if (!changing)
+        {
+            if (overrideSettingsScene != "" && amIOnPC)
+                PassageMovement.passedArgument = overrideSettingsScene;
+            else
+                PassageMovement.passedArgument = sceneName;
+            StartCoroutine(changeScene());
+        }
     }
 
-    IEnumerator WaitForIt(float waitTime)
+    IEnumerator changeScene()
     {
-        yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(sceneName);
+        if (!changing)
+        {
+            changing = true;
+            float ElapsedTime = 0.0f;
+            float TotalTime = 0.5f;
+            while (ElapsedTime < TotalTime)
+            {
+                ElapsedTime += Time.deltaTime;
+                (Instantiate(Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
+                yield return null;
+            }
+            if (sceneName == "credits")
+                SceneManager.LoadScene(sceneName);
+            else
+                SceneManager.LoadScene("passage");
+        }
     }
-}
 
+    //IEnumerator WaitForIt(float waitTime)
+    //{
+    //    yield return new WaitForSeconds(waitTime);
+    //    SceneManager.LoadScene(sceneName);
+    //}
+}

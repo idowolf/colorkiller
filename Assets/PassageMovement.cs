@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class PassageMovement : MonoBehaviour
 {
@@ -11,18 +12,18 @@ public class PassageMovement : MonoBehaviour
     public float speed;
     private Vector3 oldVelocity;
     public GameObject bullet;
-    float leftConstraint = Screen.width;
-    float rightConstraint = Screen.width;
-    float bottomConstraint = Screen.height;
-    float topConstraint = Screen.height;
     float buffer = 1.0f;
     Camera cam;
     float distanceZ;
     bool changing;
+    public bool overridePassedArgument;
+    public string overrrideScene;
     public static string passedArgument = "level2";
     // Use this for initialization
     void Start()
     {
+        if(!overridePassedArgument)
+            ChangeText();
         r2d = GetComponent<Rigidbody2D>();
         Vector3 dest = new Vector3(Mathf.Cos(degree), Mathf.Sin(degree), 0f);
         Vector3 dif = dest - transform.position.normalized;
@@ -39,15 +40,49 @@ public class PassageMovement : MonoBehaviour
 
         cam = Camera.main;
         distanceZ = Mathf.Abs(cam.transform.position.z + transform.position.z);
-
-        leftConstraint = cam.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, distanceZ)).x;
-        rightConstraint = cam.ScreenToWorldPoint(new Vector3(Screen.width, 0.0f, distanceZ)).x;
-        bottomConstraint = cam.ScreenToWorldPoint(new Vector3(0.0f, 0.0f, distanceZ)).y;
-        topConstraint = cam.ScreenToWorldPoint(new Vector3(0.0f, Screen.height, distanceZ)).y;
-
+        
     }
 
-
+    void ChangeText()
+    {
+        Text text = GameObject.Find("DestText").GetComponent<Text>();
+        switch (passedArgument)
+        {
+            case "menu":
+                text.text = "Menu Screen";
+                break;
+            case "level1":
+                text.text = "Level 1";
+                break;
+            case "level2":
+                text.text = "Level 2";
+                break;
+            case "level3":
+                text.text = "Level 3";
+                break;
+            case "level4":
+                text.text = "Level 4";
+                break;
+            case "level5":
+                text.text = "Level 5";
+                break;
+            case "level6":
+                text.text = "Level 6";
+                break;
+            case "level7":
+                text.text = "Level 7";
+                break;
+            case "settings":
+                text.text = "Settings";
+                break;
+            case "settingsPC":
+                text.text = "Settings";
+                break;
+            case "credits":
+                text.text = "Credits";
+                break;
+        }
+    }
     void OnBecameInvisible()
     {
         if (!changing)
@@ -70,7 +105,10 @@ public class PassageMovement : MonoBehaviour
                 (Instantiate(Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
                 yield return null;
             }
-            SceneManager.LoadScene(passedArgument);
+            if (overridePassedArgument)
+                SceneManager.LoadScene(overrrideScene);
+            else
+                SceneManager.LoadScene(passedArgument);
         }
     }
 }

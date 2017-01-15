@@ -9,13 +9,18 @@ public class ScoreManager : MonoBehaviour
     public static int score;
     public int scoreToNext;               //score limit to finish level
     public string nextSceneName;          //next level  
+    public string overrideSettingsScene;
     public Text scoreText;
     Material mat;
+    public bool overrideScore;
+    private bool amIOnPC;
     private bool changing;
     // Use this for initialization
     void Start()
     {
-
+#if UNITY_ANDROID
+        amIOnPC = true;
+#endif
     }
 
     // Update is called once per frame
@@ -27,11 +32,13 @@ public class ScoreManager : MonoBehaviour
     }
     void changeLevel()
     {
-        if (ScoreManager.score >= scoreToNext)
+        if (ScoreManager.score >= scoreToNext || overrideScore)
         {
-            if (!changing) { 
-            PassageMovement.passedArgument = nextSceneName;
-            StartCoroutine(changeScene());
+            if (!changing) {
+                if (overrideSettingsScene != "" && amIOnPC)
+                    PassageMovement.passedArgument = overrideSettingsScene;
+                else
+                    PassageMovement.passedArgument = nextSceneName; StartCoroutine(changeScene());
             }
         }
     }
@@ -57,4 +64,6 @@ public class ScoreManager : MonoBehaviour
             SceneManager.LoadScene("passage");
         }
     }
+
+
 }
