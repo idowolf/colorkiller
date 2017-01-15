@@ -21,6 +21,8 @@ public class SameColorPowerupScript : Destroyable
     {
         if (!stillActive)
         {
+            Instantiate(Resources.Load("PowerupTimer") as GameObject);
+
             stillActive = true;
             enemies = FindObjectsOfType(typeof(EnemyScript)) as EnemyScript[];
 

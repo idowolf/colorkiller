@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static int score;
     public int scoreToNext;               //score limit to finish level
-    public string nextSceneName;          //next level  
+    public string sceneName;          //next level  
     public string overrideSettingsScene;
     public Text scoreText;
     Material mat;
@@ -35,11 +35,16 @@ public class ScoreManager : MonoBehaviour
         if (ScoreManager.score >= scoreToNext || overrideScore)
         {
             if (!changing) {
+                astroidFactory.score = 0;
                 if (overrideSettingsScene != "" && amIOnPC)
+                { 
                     PassageMovement.passedArgument = overrideSettingsScene;
+                }
                 else
-                    astroidFactory.score = 0;
-                    PassageMovement.passedArgument = nextSceneName; StartCoroutine(changeScene());
+                { 
+                    PassageMovement.passedArgument = sceneName;
+                }
+                StartCoroutine(changeScene());
             }
         }
     }
@@ -62,7 +67,10 @@ public class ScoreManager : MonoBehaviour
             (Instantiate (Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color= Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
             yield return null;
         }
-            SceneManager.LoadScene("passage");
+            if (sceneName == "credits" || sceneName == "menu" || sceneName == "settings" || sceneName == "settingsPC")
+                SceneManager.LoadScene(PassageMovement.passedArgument);
+            else
+                SceneManager.LoadScene("passage");
         }
     }
 

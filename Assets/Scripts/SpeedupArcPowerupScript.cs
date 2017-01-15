@@ -25,6 +25,8 @@ public class SpeedupArcPowerupScript : Destroyable
         bool activated = false;
         if (!stillActive)
         {
+            Instantiate(Resources.Load("PowerupTimer") as GameObject);
+
             stillActive = true;
              spaceship = FindObjectOfType(typeof(Rotate)) as Rotate;
              prevRotSpeed = spaceship.rotSpeed;

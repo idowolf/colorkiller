@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class RandomPowerupScript : Destroyable
 {
     public ObjectColor targetColor = ObjectColor.Yellow;
