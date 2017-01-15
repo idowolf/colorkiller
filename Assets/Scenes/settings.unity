@@ -255,6 +255,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 757980300}
+--- !u!1001 &870355924
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4584656307238764, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316846157388566, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+      propertyPath: m_Name
+      value: BG3 (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 0bfde9b182ed19f4a80ab9d6956ba616, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1191235627 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1482901964638516, guid: 36aa1f11e34511a44820ee56d05eb7f2,
@@ -303,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -9.350006}
+  m_AnchoredPosition: {x: 0, y: -9.349976}
   m_SizeDelta: {x: 800, y: 56}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1317519327
