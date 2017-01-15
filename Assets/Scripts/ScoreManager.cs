@@ -12,13 +12,12 @@ public class ScoreManager : MonoBehaviour
     public string overrideSettingsScene;
     public Text scoreText;
     Material mat;
-    public bool overrideScore;
     private bool amIOnPC;
     private bool changing;
     // Use this for initialization
     void Start()
     {
-#if UNITY_ANDROID
+#if UNITY_EDITOR
         amIOnPC = true;
 #endif
     }
@@ -32,7 +31,7 @@ public class ScoreManager : MonoBehaviour
     }
     void changeLevel()
     {
-        if (ScoreManager.score >= scoreToNext || overrideScore)
+        if (ScoreManager.score >= scoreToNext )
         {
             if (!changing) {
                 astroidFactory.score = 0;
