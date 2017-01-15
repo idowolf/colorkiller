@@ -72,6 +72,9 @@ public class PassageMovement : MonoBehaviour
             case "level7":
                 text.text = "Level 7";
                 break;
+            case "level8":
+                text.text = "Level 8";
+                break;
             case "settings":
                 text.text = "Settings";
                 break;
