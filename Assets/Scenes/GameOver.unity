@@ -648,50 +648,37 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 2.11
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.52
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4685193472447940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
+    - target: {fileID: 4404698097492940, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1393963896244958, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
-      propertyPath: m_Name
-      value: FourColorSpaceship
-      objectReference: {fileID: 0}
-    - target: {fileID: 1992398988703468, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114298291958276212, guid: 6e6cc27ed201ebc4cbe92326296c555d,
-        type: 2}
-      propertyPath: shootRate
-      value: 0.4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6e6cc27ed201ebc4cbe92326296c555d, type: 2}
@@ -844,7 +831,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.20784315, g: 0.8862746, b: 0.9490197, a: 0.472}
+    m_NormalColor: {r: 0.20784315, g: 0.8862746, b: 0.9490197, a: 1}
     m_HighlightedColor: {r: 0.20000002, g: 0.85098046, b: 0.91372555, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

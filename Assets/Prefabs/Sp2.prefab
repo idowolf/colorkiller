@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 114637434533063846}
   - component: {fileID: 60037665219356650}
   m_Layer: 0
-  m_Name: TwoColorSpaceship
+  m_Name: Sp2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 114486523424808818, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
   rotationSpeed: 5
-  audio: {fileID: 8300000, guid: 094d674aeccc92040b1227cc6f6e920f, type: 3}
+  shootRate: 0.5
 --- !u!114 &114147859998022736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1143,8 +1143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8aed87fd97a9474d8e98f7b55f27092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 6
-  androidRotSpeed: 7
 --- !u!114 &114190065389799632
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 114160390619941270}
   - component: {fileID: 60401014118581944}
   m_Layer: 0
-  m_Name: OneColorSpaceship
+  m_Name: Sp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1226,8 +1226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8aed87fd97a9474d8e98f7b55f27092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotSpeed: 6
-  androidRotSpeed: 7
 --- !u!114 &114597109366621132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1271,7 +1269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 114486523424808818, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
   rotationSpeed: 5
-  audio: {fileID: 8300000, guid: 094d674aeccc92040b1227cc6f6e920f, type: 3}
+  shootRate: 0.5
 --- !u!114 &114802709440489454
 MonoBehaviour:
   m_ObjectHideFlags: 1
