@@ -16,7 +16,7 @@ public class TiltSettingScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Rotate.androidTiltEnabled = true;
+        //Rotate.androidTiltEnabled = true;
         if (TiltSettingScript.callerScene == "menu")
             SceneManager.LoadScene("menu");
         if (TiltSettingScript.callerScene == "level1")

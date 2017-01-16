@@ -9,9 +9,8 @@ public class SpeedupArcPowerupScript : Destroyable
     public float effectLength = 5f;
     public static bool stillActive;
     static Rotate[] enemies;
-    public static Rotate spaceship;
-    public static float prevRotSpeed;
-    public static float prevAndroidRotSpeed;
+    public static Fire spaceship;
+    public static float prevShootRate;
     static Dictionary<int, ObjectColor> enemySpeedDict;
     // Use this for initialization
     new void Start()
@@ -28,27 +27,26 @@ public class SpeedupArcPowerupScript : Destroyable
             Instantiate(Resources.Load("PowerupTimer") as GameObject);
 
             stillActive = true;
-             spaceship = FindObjectOfType(typeof(Rotate)) as Rotate;
-             prevRotSpeed = spaceship.rotSpeed;
-             prevAndroidRotSpeed = spaceship.androidRotSpeed;
+            spaceship = FindObjectOfType(typeof(Fire)) as Fire;
+            prevShootRate = spaceship.shootRate;
 
 
         }
         if (spaceship)
         {
-            if((spaceship.rotSpeed < prevRotSpeed * 4 && spaceship.androidRotSpeed < prevAndroidRotSpeed * 4)
-                || GetComponent<SwitchPowerupScript>()) {
+            //(spaceship.shootRate < prevShootRate / 8) 
+            if (true|| FindObjectOfType<SwitchPowerupScript>())
+            {
                 activated = true;
-                spaceship.rotSpeed *= multiplier;
-                spaceship.androidRotSpeed *= multiplier;
+                spaceship.shootRate /= multiplier;
             }
         }
         yield return new WaitForSeconds(effectLength);
         if (spaceship)
         {
-            if (activated) { 
-            spaceship.rotSpeed /= multiplier;
-            spaceship.androidRotSpeed /= multiplier;
+            if (activated)
+            {
+                spaceship.shootRate *= multiplier;
             }
         }
         if (stillActive)
@@ -59,5 +57,3 @@ public class SpeedupArcPowerupScript : Destroyable
 
 
 }
-
-
