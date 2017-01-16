@@ -7,11 +7,11 @@ public class ButtonLeftScript : MonoBehaviour
 {
     public void onPointerDownRaceButton()
     {
-        Rotate.cmd = InputCmd.RotateLeft;
+        //Rotate.cmd = InputCmd.RotateLeft;
     }
     public void onPointerUpRaceButton()
     {
-        Rotate.cmd = InputCmd.DoNone;
+        //Rotate.cmd = InputCmd.DoNone;
     }
 }
 

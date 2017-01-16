@@ -8,6 +8,6 @@ public class SwitchPowerupScript : SpeedupArcPowerupScript
     new void Start()
     {
         base.Start();
-        base.multiplier = -1;
+        base.multiplier = 0.5f;
     }
 }

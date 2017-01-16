@@ -43,9 +43,7 @@ public class ButtonScript : MonoBehaviour {
                 yield return null;
             }
             ScoreManager.score = 0;
-            if (sceneName == "settings")
-                TiltSettingScript.callerScene = SceneManager.GetActiveScene().name;
-            if (sceneName == "credits" || sceneName == "menu" || sceneName == "settings" || sceneName == "settingsPC")
+            if (sceneName == "credits" || sceneName == "menu")
                 SceneManager.LoadScene(PassageMovement.passedArgument);
             else
                 SceneManager.LoadScene("passage");
