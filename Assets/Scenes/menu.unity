@@ -1307,6 +1307,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: level1
   overrideSettingsScene: 
+--- !u!114 &1704324373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1704324371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 349341423be5def468700b8f666512dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1750620393
 GameObject:
   m_ObjectHideFlags: 0
