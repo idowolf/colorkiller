@@ -46,45 +46,7 @@ public class PassageMovement : MonoBehaviour
     void ChangeText()
     {
         Text text = GameObject.Find("DestText").GetComponent<Text>();
-        switch (passedArgument)
-        {
-            case "menu":
-                text.text = "Menu Screen";
-                break;
-            case "level1":
-                text.text = "Level 1";
-                break;
-            case "level2":
-                text.text = "Level 2";
-                break;
-            case "level3":
-                text.text = "Level 3";
-                break;
-            case "level4":
-                text.text = "Level 4";
-                break;
-            case "level5":
-                text.text = "Level 5";
-                break;
-            case "level6":
-                text.text = "Level 6";
-                break;
-            case "level7":
-                text.text = "Level 7";
-                break;
-            case "level8":
-                text.text = "Level 8";
-                break;
-            case "settings":
-                text.text = "Settings";
-                break;
-            case "settingsPC":
-                text.text = "Settings";
-                break;
-            case "credits":
-                text.text = "Credits";
-                break;
-        }
+        text.text = passedArgument;
     }
     void OnBecameInvisible()
     {

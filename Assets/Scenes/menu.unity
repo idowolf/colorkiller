@@ -1116,7 +1116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe35fcb50ddf2f4ea758f9ce43aea05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: level1
+  sceneName: level 1
   overrideSettingsScene: 
 --- !u!114 &1704324373
 MonoBehaviour:
