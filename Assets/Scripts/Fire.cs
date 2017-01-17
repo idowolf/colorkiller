@@ -11,7 +11,7 @@ public class Fire : MonoBehaviour
     public float rotationSpeed;
     float rotZ;
     bool shoot;
-    public float shootRate = .5f;
+    public float shootRate = .3f;
     float time;
     // Use this for initialization
     void Start()

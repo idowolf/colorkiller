@@ -33,7 +33,6 @@ public class astroidFactory : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        ScoreManager.score = addToScore;
         InvokeRepeating("addAstroid", 0, spawnTime);
         astroidCounter = 1;
         score = 0;

@@ -15,7 +15,7 @@ TagManager:
   - 
   - Background
   - ButtonThing
-  - 
+  - Buttons
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: Fire
     uniqueID: 2037212077
+    locked: 0
+  - name: Buttons
+    uniqueID: 4194217687
     locked: 0

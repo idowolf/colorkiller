@@ -10,8 +10,10 @@ public class ScoreManager : MonoBehaviour
     public int levelScore;
     private int initScore;
     public int scoreToNext;               //score limit to finish level
+    public static int prevScoresToNext = 0;
     public string sceneName;          //next level  
     public string overrideSettingsScene;
+    public static string currentSceneName = "menu";
     public Text scoreText;
     Material mat;
     private bool amIOnPC;
@@ -23,13 +25,14 @@ public class ScoreManager : MonoBehaviour
         amIOnPC = true;
 #endif
         initScore = score;
+        currentSceneName = SceneManager.GetActiveScene().name;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         levelScore = score - initScore;
-        Debug.Log(levelScore);
         changeLevel();
         setScoreText();
 
@@ -55,7 +58,7 @@ public class ScoreManager : MonoBehaviour
 
     void setScoreText()
     {
-        scoreText.text = "SCORE : " + (ScoreManager.score * (10)).ToString();
+        scoreText.text = "SCORE : " + (ScoreManager.score * (10)).ToString() + " / " + ((scoreToNext + prevScoresToNext)*10).ToString();
     }
 
     IEnumerator changeScene()
@@ -71,6 +74,7 @@ public class ScoreManager : MonoBehaviour
             (Instantiate (Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color= Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
             yield return null;
         }
+            prevScoresToNext += scoreToNext;
             if (sceneName == "credits" || sceneName == "menu")
                 SceneManager.LoadScene(PassageMovement.passedArgument);
             else
