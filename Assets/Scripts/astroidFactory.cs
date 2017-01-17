@@ -27,10 +27,13 @@ public class astroidFactory : MonoBehaviour
     public int disActivation;                       // disactivate the factory after X number of astroids has been launched (totalAstroidsNum)
 
     astroidFactory factory;
+
+    //use this to skip levels whule testing game
+    public int addToScore = 0;
     // Use this for initialization
     void Start()
     {
-
+        ScoreManager.score = addToScore;
         InvokeRepeating("addAstroid", 0, spawnTime);
         astroidCounter = 1;
         score = 0;
