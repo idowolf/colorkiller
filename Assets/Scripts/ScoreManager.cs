@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     public static int score;
+    public int levelScore;
+    private int initScore;
     public int scoreToNext;               //score limit to finish level
     public string sceneName;          //next level  
     public string overrideSettingsScene;
@@ -20,18 +22,21 @@ public class ScoreManager : MonoBehaviour
 #if UNITY_EDITOR
         amIOnPC = true;
 #endif
+        initScore = score;
     }
 
     // Update is called once per frame
     void Update()
     {
+        levelScore = score - initScore;
+        Debug.Log(levelScore);
         changeLevel();
         setScoreText();
 
     }
     void changeLevel()
     {
-        if (ScoreManager.score >= scoreToNext )
+        if (levelScore >= scoreToNext )
         {
             if (!changing) {
                 astroidFactory.score = 0;
