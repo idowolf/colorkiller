@@ -74,31 +74,63 @@ using UnityEngine.EventSystems;
 
 public class Rotate : MonoBehaviour
 {
-
+    bool init, cont;
+    bool stillActive;
     float OriginalRotAng;
     float OriginalTouchAng;
     float RotationAngle;
     private Quaternion originalRotation;
     Quaternion abc;
     private float angle;
+    private float time;
+    Vector3 rotationLast; //The value of the rotation at the previous update
+    Vector3 rotationDelta; //The difference in rotation between now and the previous update
     private float startAngle = 0;
     Quaternion finalRot;
     public void Start()
     {
         abc = this.transform.rotation;
+        rotationLast = transform.rotation.eulerAngles;
+
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-            InputIsDown();
+        //Update both variables, so they're accurate every frame.
+        rotationDelta = transform.rotation.eulerAngles - rotationLast;
+        rotationLast = transform.rotation.eulerAngles;
 
-        else if (Input.GetKey(KeyCode.Mouse0))
-            InputIsHeld();
-        else
+        //Debug.Log(angle + " : " + backAngle(toAngle(angle)));
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            transform.rotation = abc;
+            InputIsDown();
+            init = true;
         }
 
+        else if (Input.GetKey(KeyCode.Mouse0))
+        {
+            InputIsHeld();
+            if (init)
+            {
+                init = false;
+                cont = true;
+                StartCoroutine(Click());
+            }
+        }
+        else
+        {
+            //transform.rotation = Quaternion.RotateTowards(transform.rotation,transform.rotation.
+            cont = false;
+            init = false;
+        }
+        Debug.Log(1 / Mathf.Abs(angularVelocity.z));
+
+    }
+    public Vector3 angularVelocity
+    {
+        get
+        {
+            return rotationDelta;
+        }
     }
 
     public void InputIsDown()
@@ -122,4 +154,52 @@ public class Rotate : MonoBehaviour
         abc = this.transform.rotation;
     }
 
+    public float toAngle(float angle)
+    {
+        float n1 = 180 - angle;
+        if (n1 >= 90 && n1 <= 180)
+            return n1 - 90;
+        if (n1 >= 0 && n1 <= 90)
+            return n1 + 270;
+        return Mathf.Abs(angle) + 90;
+
+    }
+
+    public float backAngle(float angle)
+    {
+        float n1 = 0;
+
+        if (angle >= 270 && angle <= 360)
+        {
+            n1 = angle + 90;
+            n1 = 180 - n1;
+        }
+        else if (n1 >= 0 && n1 <= 90)
+        {
+            n1 = angle + 270;
+            n1 = 180 - n1;
+        }
+        else if (n1 >= 90 && n1 <= 180)
+            n1 = 90 - angle;
+
+        return n1;
+    }
+
+    public float diffAngles(float transAngle, float destAngle)
+    {
+        return 0;
+    }
+
+    public IEnumerator Click()
+    {
+        yield return new WaitForSeconds(Mathf.Abs(angularVelocity.z) < 0.05f ? 0.2f : 1 / Mathf.Abs(angularVelocity.z));
+
+        if (cont)
+        {
+            //stillActive = true;
+            Instantiate(Resources.Load("Click1") as GameObject);
+
+        }
+        StartCoroutine(Click());
+    }
 }

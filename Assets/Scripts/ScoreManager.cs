@@ -58,7 +58,8 @@ public class ScoreManager : MonoBehaviour
 
     void setScoreText()
     {
-        scoreText.text = "SCORE : " + (ScoreManager.score * (10)).ToString() + " / " + ((scoreToNext + prevScoresToNext)*10).ToString();
+        if(scoreText)
+            scoreText.text = "SCORE : " + (ScoreManager.score * (10)).ToString() + " / " + ((scoreToNext + prevScoresToNext)*10).ToString();
     }
 
     IEnumerator changeScene()
@@ -75,7 +76,7 @@ public class ScoreManager : MonoBehaviour
             yield return null;
         }
             prevScoresToNext += scoreToNext;
-            if (sceneName == "credits" || sceneName == "menu")
+            if (sceneName == "credits" || sceneName == "menu" || sceneName == "dialtutorial")
                 SceneManager.LoadScene(PassageMovement.passedArgument);
             else
                 SceneManager.LoadScene("passage");
