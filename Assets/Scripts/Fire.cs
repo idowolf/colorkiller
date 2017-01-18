@@ -8,11 +8,12 @@ public class Fire : MonoBehaviour
     private Vector3 mousePos;
     public BulletCtrl bullet;
     private Vector3 dif;
-    public float rotationSpeed;
+    public static float rotationSpeed = 10;
     float rotZ;
     bool shoot;
-    public float shootRate = .3f;
     float time;
+    public static float shootRate = .2f;
+
     // Use this for initialization
     void Start()
     {

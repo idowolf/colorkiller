@@ -10,6 +10,7 @@ public class ResizeSpaceshipPowerupScript : Destroyable
     public static bool stillActive;
     public static SpaceshipScript spaceship;
     public static Vector3 prevScale;
+    public static Vector3 CircleScale;
     public Vector3 myVector;
     // Use this for initialization
     new void Start()
@@ -22,12 +23,12 @@ public class ResizeSpaceshipPowerupScript : Destroyable
 
         if (!stillActive)
         {
-            Debug.Log("Hi Ido");
             GameObject.Instantiate(Resources.Load("PowerupTimer"));
-            Debug.Log("Hi Ido2");
             stillActive = true;
             spaceship = FindObjectOfType(typeof(SpaceshipScript)) as SpaceshipScript;
             prevScale = spaceship.gameObject.transform.localScale;
+            CircleScale = GameObject.FindGameObjectWithTag("Circle").transform.localScale;
+
 
 
 
@@ -36,11 +37,17 @@ public class ResizeSpaceshipPowerupScript : Destroyable
         {
             myVector = new Vector3(prevScale.x * multiplier, prevScale.y * multiplier, prevScale.z * multiplier);
             spaceship.gameObject.transform.localScale = myVector;
+            Debug.Log("hi");
+            GameObject.FindGameObjectWithTag("Circle").transform.localScale = CircleScale / multiplier;
         }
         yield return new WaitForSeconds(effectLength);
-        if (spaceship.gameObject.transform.localScale.Equals(myVector)) { 
-            spaceship.gameObject.transform.localScale = prevScale;
-        if (stillActive)
+        if (spaceship.gameObject.transform.localScale.Equals(myVector))
+        {
+            {
+                GameObject.FindGameObjectWithTag("Circle").transform.localScale = CircleScale;
+                spaceship.gameObject.transform.localScale = prevScale;
+            }
+            if (stillActive)
         { 
             stillActive = false;
         }

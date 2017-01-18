@@ -80,6 +80,7 @@ public class Rotate : MonoBehaviour
     float RotationAngle;
     private Quaternion originalRotation;
     Quaternion abc;
+    private float angle;
     private float startAngle = 0;
     Quaternion finalRot;
     public void Start()
@@ -93,11 +94,9 @@ public class Rotate : MonoBehaviour
 
         else if (Input.GetKey(KeyCode.Mouse0))
             InputIsHeld();
-        else if (Input.GetKeyUp(KeyCode.Mouse0))
+        else
         {
-            this.transform.rotation = abc;
-
-
+            transform.rotation = abc;
         }
 
     }
@@ -115,7 +114,7 @@ public class Rotate : MonoBehaviour
     {
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 vector = Input.mousePosition - screenPos;
-        float angle = Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
+        angle = Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
         Quaternion newRotation = Quaternion.AngleAxis(angle - startAngle, this.transform.forward);
         newRotation.y = 0; //see comment from above 
         newRotation.eulerAngles = new Vector3(0, 0, newRotation.eulerAngles.z);

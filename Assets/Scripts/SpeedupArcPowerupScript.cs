@@ -28,7 +28,7 @@ public class SpeedupArcPowerupScript : Destroyable
 
             stillActive = true;
             spaceship = FindObjectOfType(typeof(Fire)) as Fire;
-            prevShootRate = spaceship.shootRate;
+            prevShootRate = Fire.shootRate;
 
 
         }
@@ -38,7 +38,7 @@ public class SpeedupArcPowerupScript : Destroyable
             if (true|| FindObjectOfType<SwitchPowerupScript>())
             {
                 activated = true;
-                spaceship.shootRate /= multiplier;
+                Fire.shootRate /= multiplier;
             }
         }
         yield return new WaitForSeconds(effectLength);
@@ -46,7 +46,7 @@ public class SpeedupArcPowerupScript : Destroyable
         {
             if (activated)
             {
-                spaceship.shootRate *= multiplier;
+                Fire.shootRate *= multiplier;
             }
         }
         if (stillActive)
