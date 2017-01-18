@@ -457,7 +457,7 @@ PlayerSettings:
     Collab: 0
     ErrorHub: 0
     Hub: 0
-    UNet: 0
+    UNet: 1
   cloudProjectId: 650fa9a6-3b2d-4a98-a9c1-951b853af092
   projectName: ColorSwitch
   organizationId: kedeman
