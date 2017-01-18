@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class BGMusicScript : MonoBehaviour {
-    static bool AudioBegin = false;
+    public static bool AudioBegin = false;
     void Awake()
     {
         if (!AudioBegin)
