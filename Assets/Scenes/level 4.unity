@@ -719,6 +719,11 @@ Prefab:
       propertyPath: myPowerup
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114470481464928934, guid: 0cfb05aaef3b5c743a8442d2122dacd7,
+        type: 2}
+      propertyPath: random
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cfb05aaef3b5c743a8442d2122dacd7, type: 2}
   m_IsPrefabParent: 0
