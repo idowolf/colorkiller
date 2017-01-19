@@ -6,9 +6,31 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/menu.unity
+    path: Assets/Scenes/credits 1.unity
+  - enabled: 1
+    path: Assets/Scenes/credits 2.unity
+  - enabled: 1
+    path: Assets/Scenes/credits 3.unity
+  - enabled: 1
+    path: Assets/Scenes/credits 4.unity
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+  - enabled: 1
+    path: Assets/Scenes/dialtutorial.unity
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
   - enabled: 1
     path: Assets/Scenes/level 1.unity
+  - enabled: 1
+    path: Assets/Scenes/level 10.unity
+  - enabled: 1
+    path: Assets/Scenes/level 11.unity
+  - enabled: 1
+    path: Assets/Scenes/level 12.unity
+  - enabled: 1
+    path: Assets/Scenes/level 13.unity
+  - enabled: 1
+    path: Assets/Scenes/level 14.unity
   - enabled: 1
     path: Assets/Scenes/level 2.unity
   - enabled: 1
@@ -18,32 +40,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/level 5.unity
   - enabled: 1
+    path: Assets/Scenes/level 6.unity
+  - enabled: 1
     path: Assets/Scenes/level 7.unity
   - enabled: 1
     path: Assets/Scenes/level 8.unity
   - enabled: 1
     path: Assets/Scenes/level 9.unity
   - enabled: 1
-    path: Assets/Scenes/level 10.unity
-  - enabled: 1
-    path: Assets/Scenes/level 11.unity
-  - enabled: 1
-    path: Assets/Scenes/leval 12.unity
-  - enabled: 1
-    path: Assets/Scenes/level 13.unity
-  - enabled: 1
-    path: Assets/Scenes/level 14.unity
+    path: Assets/Scenes/menu.unity
   - enabled: 1
     path: Assets/Scenes/passage.unity
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-  - enabled: 1
-    path: Assets/Scenes/credits 4.unity
-  - enabled: 1
-    path: Assets/Scenes/credits 3.unity
-  - enabled: 1
-    path: Assets/Scenes/credits 2.unity
-  - enabled: 1
-    path: Assets/Scenes/credits 1.unity
-  - enabled: 1
-    path: Assets/Scenes/credits.unity
