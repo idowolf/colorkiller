@@ -220,8 +220,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 114486523424808818, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
-  rotationSpeed: 5
-  shootRate: 0.5
 --- !u!212 &5025291
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4909,7 +4907,7 @@ Prefab:
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
       propertyPath: scoreToNext
-      value: 70
+      value: 87
       objectReference: {fileID: 0}
     - target: {fileID: 1878313815263382, guid: 618f54706ed82524d9172049c89414eb, type: 2}
       propertyPath: m_Name

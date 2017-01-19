@@ -724,7 +724,7 @@ Prefab:
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
       propertyPath: scoreToNext
-      value: 280
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
@@ -1041,7 +1041,7 @@ Prefab:
     - target: {fileID: 114838796539527290, guid: e5b81a662c7bb2b4b9a584a9210d3a71,
         type: 2}
       propertyPath: degree
-      value: 165
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1592500190953560, guid: e5b81a662c7bb2b4b9a584a9210d3a71, type: 2}
       propertyPath: m_Name
