@@ -32,6 +32,7 @@ public class TryAgainButton : MonoBehaviour
                 (Instantiate(Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
                 yield return null;
             }
+            Debug.Log("Lookie here");
             ScoreManager.score = 0;
             PassageMovement.passedArgument = ScoreManager.currentSceneName;
             Debug.Log(PassageMovement.passedArgument);

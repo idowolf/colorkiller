@@ -45,6 +45,7 @@ public class CreditsOnClick : MonoBehaviour
                 (Instantiate(Resources.Load("Blackscreen") as GameObject)).gameObject.GetComponent<SpriteRenderer>().color = Color.Lerp(new Color(1, 1, 1, 0), Color.black, (ElapsedTime / TotalTime));
                 yield return null;
             }
+            Debug.Log("Lookie here");
             ScoreManager.score = 0;
             if (sceneName == "credits" || sceneName == "menu")
                 SceneManager.LoadScene(PassageMovement.passedArgument);
