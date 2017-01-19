@@ -33,6 +33,8 @@ public class ButtonScript : MonoBehaviour {
     {
         if (!changing)
         {
+            if (GetComponent<AudioSource>())
+                GetComponent<AudioSource>().Play();
             changing = true;
             float ElapsedTime = 0.0f;
             float TotalTime = 0.5f;

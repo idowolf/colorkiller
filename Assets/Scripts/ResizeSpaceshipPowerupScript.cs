@@ -37,7 +37,6 @@ public class ResizeSpaceshipPowerupScript : Destroyable
         {
             myVector = new Vector3(prevScale.x * multiplier, prevScale.y * multiplier, prevScale.z * multiplier);
             spaceship.gameObject.transform.localScale = myVector;
-            Debug.Log("hi");
             GameObject.FindGameObjectWithTag("Circle").transform.localScale = CircleScale / multiplier;
         }
         yield return new WaitForSeconds(effectLength);
@@ -48,12 +47,27 @@ public class ResizeSpaceshipPowerupScript : Destroyable
                 spaceship.gameObject.transform.localScale = prevScale;
             }
             if (stillActive)
-        { 
-            stillActive = false;
-        }
+            {
+                stillActive = false;
+            }
         }
         GameObject.Destroy(gameObject);
 
+    }
+
+    void OnDestroy()
+    {
+        if (spaceship.gameObject.transform.localScale.Equals(myVector))
+        {
+            {
+                GameObject.FindGameObjectWithTag("Circle").transform.localScale = CircleScale;
+                spaceship.gameObject.transform.localScale = prevScale;
+            }
+            if (stillActive)
+            {
+                stillActive = false;
+            }
+        }
     }
 
 

@@ -1,79 +1,11 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
-//using UnityEngine.EventSystems;
-//public enum InputCmd
-//{
-//    DoNone,
-//    RotateLeft,
-//    RotateRight
-//}
-//public class Rotate : MonoBehaviour
-//{
-//    private float speed = 1000;
-//    public float rotSpeed = 2;
-//    public float androidRotSpeed = 5;
-//    private GameObject endRotation;
-//    public static bool androidTiltEnabled = true;
-//    public static InputCmd cmd;
-//    // Use this for initialization
-//    void Start()
-//    {
-//        endRotation = new GameObject();
-//#if UNITY_ANDROID
-//        Input.compensateSensors = true;
-//        Input.gyro.enabled = true;
-//        if (!androidTiltEnabled)
-//        {
-//            GameObject.Instantiate(Resources.Load("Android_button_l"));
-//            GameObject.Instantiate(Resources.Load("Android_button_r"));
-//        }
-//#endif
-//    }
-
-//    // Update is called once per frame
-//    void FixedUpdate()
-//    {
-//#if UNITY_ANDROID
-//        if (androidTiltEnabled)
-//            this.transform.Rotate(0, 0, -Input.gyro.rotationRateUnbiased.z * androidRotSpeed);
-//        else
-//        {
-//            if (cmd == InputCmd.RotateLeft)
-//            {
-//                endRotation.transform.Rotate(Vector3.forward, rotSpeed, Space.World);
-
-//            }
-//            if (cmd == InputCmd.RotateRight)
-//            {
-//                endRotation.transform.Rotate(Vector3.forward, -rotSpeed, Space.World);
-//            }
-
-//            this.transform.rotation = Quaternion.Lerp(this.transform.rotation, endRotation.transform.rotation, Time.deltaTime * speed);
-//        }
-//#endif
-//#if UNITY_EDITOR
-//        if (Input.GetKey(KeyCode.LeftArrow))
-//        {
-//            endRotation.transform.Rotate(Vector3.forward, rotSpeed, Space.World);
-//        }
-//        if (Input.GetKey(KeyCode.RightArrow))
-//        {
-//            endRotation.transform.Rotate(Vector3.forward, -rotSpeed, Space.World);
-//        }
-//        transform.rotation = Quaternion.Lerp(this.transform.rotation, endRotation.transform.rotation, Time.deltaTime * speed);
-//#endif
-//    }
-//}
-
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Rotate : MonoBehaviour
 {
+    public static int nimrodConstant = 300;
     bool init, cont;
     bool stillActive;
     float OriginalRotAng;
@@ -82,6 +14,7 @@ public class Rotate : MonoBehaviour
     private Quaternion originalRotation;
     Quaternion abc;
     private float angle;
+    private float prevAngle;
     private float time;
     Vector3 rotationLast; //The value of the rotation at the previous update
     Vector3 rotationDelta; //The difference in rotation between now and the previous update
@@ -113,7 +46,6 @@ public class Rotate : MonoBehaviour
             {
                 init = false;
                 cont = true;
-                StartCoroutine(Click());
             }
         }
         else
@@ -122,8 +54,6 @@ public class Rotate : MonoBehaviour
             cont = false;
             init = false;
         }
-        Debug.Log(1 / Mathf.Abs(angularVelocity.z));
-
     }
     public Vector3 angularVelocity
     {
@@ -146,7 +76,10 @@ public class Rotate : MonoBehaviour
     {
         Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 vector = Input.mousePosition - screenPos;
+        prevAngle = angle;
         angle = Mathf.Atan2(vector.y, vector.x) * Mathf.Rad2Deg;
+        if (Mathf.Abs(toAngle(prevAngle) - toAngle(angle)) > nimrodConstant * Time.deltaTime)
+            Instantiate(Resources.Load("Click1") as GameObject);
         Quaternion newRotation = Quaternion.AngleAxis(angle - startAngle, this.transform.forward);
         newRotation.y = 0; //see comment from above 
         newRotation.eulerAngles = new Vector3(0, 0, newRotation.eulerAngles.z);

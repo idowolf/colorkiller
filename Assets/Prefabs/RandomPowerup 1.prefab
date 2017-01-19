@@ -204,11 +204,11 @@ MonoBehaviour:
   initiateSelfDestruct: 0
   targetColor: 1
   powerups:
-  - {fileID: 0}
-  - {fileID: 1041074344874026, guid: 0f61175047693344cabc5604e11a180f, type: 2}
-  - {fileID: 1250658660043872, guid: 7b60218b91ce58a478b7ea9cebaaefd4, type: 2}
-  - {fileID: 1041074344874026, guid: e39ba6eed93d58c4bbeeb68e6f0ab575, type: 2}
-  - {fileID: 1020544213311872, guid: bbab443f7bc03c9448a896e0bec4cec1, type: 2}
+  - {fileID: 1940845927937788, guid: b97c6f375442c6242a92223eb54b2de1, type: 2}
+  - {fileID: 1854535131149328, guid: 0f61175047693344cabc5604e11a180f, type: 2}
+  - {fileID: 1096664279473364, guid: 7b60218b91ce58a478b7ea9cebaaefd4, type: 2}
+  - {fileID: 1817009360391688, guid: e466a319c81b6b64da8c1c044bb1faec, type: 2}
+  - {fileID: 1459989545672404, guid: f8fa00f508db35f4e8f9199c1073dd70, type: 2}
   - {fileID: 1046795947933858, guid: 98b2e7873fdbb4943ba71abd29101333, type: 2}
 --- !u!114 &114769574166055290
 MonoBehaviour:
@@ -222,6 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: 3
+  modAlpha: 0
+  alpha: 0.118
   colorUsingAssets: 0
 --- !u!114 &114890653862663324
 MonoBehaviour:

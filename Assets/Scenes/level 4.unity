@@ -295,6 +295,102 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1592888029131292, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: purplecircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969973078355214, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: purplecircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811263639743984, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: purplecircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631318832846918, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: pinkcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085275875399346, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: pinkcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041703509107218, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: pinkcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258844933900, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: yellowcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778287467072056, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: yellowcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920868556233608, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: yellowcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043093641468552, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: turkizcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093105213249384, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: turkizcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307687885991990, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_Name
+      value: turkizcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592888029131292, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: purplecircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1969973078355214, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: purplecircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811263639743984, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: purplecircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631318832846918, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: pinkcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085275875399346, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: pinkcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041703509107218, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: pinkcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038258844933900, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: yellowcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1778287467072056, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: yellowcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1920868556233608, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: yellowcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1043093641468552, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: turkizcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093105213249384, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: turkizcircle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307687885991990, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
+      propertyPath: m_TagString
+      value: turkizcircle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 016a13b70449fde4eaca92755d33a7cf, type: 2}
   m_IsPrefabParent: 0

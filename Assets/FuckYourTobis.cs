@@ -7,8 +7,6 @@ public class FuckYourTobis : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ScoreManager.score = 0;
-
-        Debug.Log("test");
     }
 	
 	// Update is called once per frame

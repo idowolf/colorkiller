@@ -10,6 +10,7 @@ public class SpeedupArcPowerupScript : Destroyable
     public static bool stillActive;
     static Rotate[] enemies;
     public static Fire spaceship;
+    bool activated;
     public static float prevShootRate;
     static Dictionary<int, ObjectColor> enemySpeedDict;
     // Use this for initialization
@@ -21,7 +22,7 @@ public class SpeedupArcPowerupScript : Destroyable
     protected override IEnumerator freezeTime()
     {
         initiateSelfDestruct = false;
-        bool activated = false;
+        activated = false;
         if (!stillActive)
         {
             Instantiate(Resources.Load("PowerupTimer") as GameObject);
@@ -42,18 +43,31 @@ public class SpeedupArcPowerupScript : Destroyable
             }
         }
         yield return new WaitForSeconds(effectLength);
-        if (spaceship)
-        {
-            if (activated)
-            {
-                Fire.shootRate *= multiplier;
-            }
-        }
+        RevertChanges();
+
         if (stillActive)
             stillActive = false;
         GameObject.Destroy(gameObject);
 
     }
+    private bool changesReverted;
 
+    public void RevertChanges()
+    {
+
+        if (!changesReverted)
+        {
+                if (activated)
+                {
+                    changesReverted = true;
+                    Fire.shootRate *= multiplier;
+                }
+        }
+    }
+
+    void OnDestroy()
+    {
+        RevertChanges();
+    }
 
 }

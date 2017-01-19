@@ -128,7 +128,7 @@ RectTransform:
   - {fileID: 1957139554}
   - {fileID: 1475999386}
   m_Father: {fileID: 1480552314}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2965,7 +2965,7 @@ Prefab:
     - target: {fileID: 114909163245930156, guid: 618f54706ed82524d9172049c89414eb,
         type: 2}
       propertyPath: sceneName
-      value: level 3
+      value: level 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 618f54706ed82524d9172049c89414eb, type: 2}
@@ -3581,8 +3581,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.725, y: 0.725, z: 0.725}
   m_Children:
-  - {fileID: 1553498920}
   - {fileID: 303420131}
+  - {fileID: 1946879366}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3633,66 +3633,54 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ed59ec7121a18e245a3eb01714748f88, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1553498919
+--- !u!1 &1946879365
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1553498920}
-  - component: {fileID: 1553498923}
-  - component: {fileID: 1553498922}
-  - component: {fileID: 1553498921}
+  - component: {fileID: 1946879366}
+  - component: {fileID: 1946879368}
+  - component: {fileID: 1946879367}
   m_Layer: 5
-  m_Name: Tap
+  m_Name: COLOR KILLER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1553498920
+--- !u!224 &1946879366
 RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1553498919}
+  m_GameObject: {fileID: 1946879365}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.10324137, y: 0.10324137, z: 0.10324137}
   m_Children: []
   m_Father: {fileID: 1480552314}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -32, y: 100}
-  m_SizeDelta: {x: 481, y: 92}
-  m_Pivot: {x: -0.13447629, y: 2.192571}
---- !u!114 &1553498921
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -613.6, y: -100.5}
+  m_SizeDelta: {x: -34.80005, y: -136.82758}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1946879367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1553498919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51905c6a1714cd141b9f81fdeaceedb3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1553498922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1553498919}
+  m_GameObject: {fileID: 1946879365}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.734}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3705,20 +3693,20 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 40
-    m_Alignment: 3
+    m_MaxSize: 75
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "TAP AND SWIPE THE DIAL \nTO CHOOSE A COLOR"
---- !u!222 &1553498923
+--- !u!222 &1946879368
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1553498919}
+  m_GameObject: {fileID: 1946879365}
 --- !u!1 &1947964441
 GameObject:
   m_ObjectHideFlags: 0

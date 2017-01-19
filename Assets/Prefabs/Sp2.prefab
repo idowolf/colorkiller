@@ -37,8 +37,8 @@ GameObject:
   - component: {fileID: 212491001250185006}
   - component: {fileID: 114956736046922326}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,8 +88,8 @@ GameObject:
   - component: {fileID: 212199827324942212}
   - component: {fileID: 114937122104983564}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,8 +105,8 @@ GameObject:
   - component: {fileID: 212637639068462424}
   - component: {fileID: 114834945943480454}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,8 +174,8 @@ GameObject:
   - component: {fileID: 212978867173493822}
   - component: {fileID: 114198920283082456}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: purplecircle
+  m_TagString: purplecircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -191,8 +191,8 @@ GameObject:
   - component: {fileID: 212581154456435226}
   - component: {fileID: 114632420554064034}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,8 +208,8 @@ GameObject:
   - component: {fileID: 212047737743613528}
   - component: {fileID: 114475290932784442}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: purplecircle
+  m_TagString: purplecircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -243,8 +243,8 @@ GameObject:
   - component: {fileID: 212203609520755478}
   - component: {fileID: 114196742291628872}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: purplecircle
+  m_TagString: purplecircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,8 +260,8 @@ GameObject:
   - component: {fileID: 212000472007458394}
   - component: {fileID: 114717312215459558}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,8 +294,8 @@ GameObject:
   - component: {fileID: 212257687751667260}
   - component: {fileID: 114147859998022736}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: purplecircle
+  m_TagString: purplecircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,8 +375,8 @@ GameObject:
   - component: {fileID: 212317567050072096}
   - component: {fileID: 114255959509245866}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -392,8 +392,8 @@ GameObject:
   - component: {fileID: 212029582194315400}
   - component: {fileID: 114190065389799632}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: purplecircle
+  m_TagString: purplecircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,8 +409,8 @@ GameObject:
   - component: {fileID: 212947112348884426}
   - component: {fileID: 114330562538733804}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: purplecircle
+  m_TagString: purplecircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1115,8 +1115,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 114486523424808818, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
-  rotationSpeed: 5
-  shootRate: 0.5
 --- !u!114 &114147859998022736
 MonoBehaviour:
   m_ObjectHideFlags: 1

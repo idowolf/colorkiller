@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Circle
+  - dialcircle
+  - turkizcircle
+  - purplecircle
+  - yellowcircle
+  - pinkcircle
   layers:
   - Default
   - TransparentFX

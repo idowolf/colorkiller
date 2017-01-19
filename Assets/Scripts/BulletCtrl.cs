@@ -49,8 +49,10 @@ public class BulletCtrl : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!isDestroyable(other.gameObject)) { 
-        if (other.GetComponent<ColoredObject>() != null)
+        if (other.GetComponent<ColoredObject>() != null) { 
             gameObject.GetComponent<ColoredObject>().SetColor(other.GetComponent<ColoredObject>().color);
+                StartCoroutine(ChangeColor());
+            }
         }
         else
         {
@@ -87,5 +89,42 @@ public class BulletCtrl : MonoBehaviour
         if(obj.GetComponent<Rigidbody2D>())
             obj.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         obj.GetComponent<Collider2D>().enabled = false;
+    }
+
+    public IEnumerator ChangeColor()
+    {
+        ObjectColor fuckNimrod = gameObject.GetComponent<ColoredObject>().color;
+        GameObject[] circles;
+        switch (fuckNimrod)
+        {
+            case ObjectColor.Pink:
+                circles = GameObject.FindGameObjectsWithTag("pinkcircle");
+                break;
+            case ObjectColor.Purple:
+                circles = GameObject.FindGameObjectsWithTag("purplecircle");
+                break;
+            case ObjectColor.Turkiz:
+                circles = GameObject.FindGameObjectsWithTag("turkizcircle");
+                break;
+            case ObjectColor.Yellow:
+                circles = GameObject.FindGameObjectsWithTag("yellowcircle");
+                break;
+            default:
+                circles = new GameObject[0];
+                break;
+        }
+        foreach (GameObject circle in circles)
+        {
+            Color color = circle.GetComponent<SpriteRenderer>().color;
+            color.a += 0.1f;
+            circle.GetComponent<SpriteRenderer>().color = color;
+        }
+        yield return new WaitForSeconds(0.1f);
+        foreach (GameObject circle in circles)
+        {
+            Color color = circle.GetComponent<SpriteRenderer>().color;
+            color.a -= 0.1f;
+            circle.GetComponent<SpriteRenderer>().color = color;
+        }
     }
 }

@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 212870470796300496}
   - component: {fileID: 114551218624158092}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,8 +39,8 @@ GameObject:
   - component: {fileID: 212824165496450420}
   - component: {fileID: 114521556056080574}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,8 +72,8 @@ GameObject:
   - component: {fileID: 212193178413878940}
   - component: {fileID: 114325077094964188}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4879866223000438}
   - component: {fileID: 212196302128539944}
+  - component: {fileID: 82480075882796262}
   m_Layer: 0
   m_Name: 1MainCircle
   m_TagString: Circle
@@ -105,8 +106,8 @@ GameObject:
   - component: {fileID: 212116285731357938}
   - component: {fileID: 114313405942369664}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,8 +138,8 @@ GameObject:
   - component: {fileID: 212017008175836556}
   - component: {fileID: 114370484335930568}
   m_Layer: 0
-  m_Name: InnerCircle (4)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -184,8 +185,8 @@ GameObject:
   - component: {fileID: 212150221838861470}
   - component: {fileID: 114802709440489454}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,8 +202,8 @@ GameObject:
   - component: {fileID: 212644147841133810}
   - component: {fileID: 114597109366621132}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,8 +219,8 @@ GameObject:
   - component: {fileID: 212258066315488668}
   - component: {fileID: 114449785356429592}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -271,8 +272,8 @@ GameObject:
   - component: {fileID: 212139626669050224}
   - component: {fileID: 114946800528985940}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -341,8 +342,8 @@ GameObject:
   - component: {fileID: 212782858034842164}
   - component: {fileID: 114474887695844868}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,8 +359,8 @@ GameObject:
   - component: {fileID: 212365338008263646}
   - component: {fileID: 114004477838182602}
   m_Layer: 0
-  m_Name: InnerCircle (3)
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -442,8 +443,8 @@ GameObject:
   - component: {fileID: 212771670763539910}
   - component: {fileID: 114883830864922288}
   m_Layer: 0
-  m_Name: InnerCircle
-  m_TagString: Untagged
+  m_Name: turkizcircle
+  m_TagString: turkizcircle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -993,6 +994,86 @@ PolygonCollider2D:
       - {x: -0.09220588, y: -0.505121}
       - {x: -0.029822826, y: -0.3501773}
       - {x: 0.11645752, y: -0.13046706}
+--- !u!82 &82480075882796262
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1152897948051160}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cbede93264bf00545b1888394a082611, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!82 &82600623900828066
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1268,8 +1349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 114486523424808818, guid: 02864b5a5a7a5a449ac768439a21767f, type: 2}
-  rotationSpeed: 5
-  shootRate: 0.5
 --- !u!114 &114802709440489454
 MonoBehaviour:
   m_ObjectHideFlags: 1
