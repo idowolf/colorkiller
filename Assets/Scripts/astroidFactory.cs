@@ -29,7 +29,7 @@ public class astroidFactory : MonoBehaviour
     astroidFactory factory;
 
     //use this to skip levels whule testing game
-    public int addToScore = 0;
+   
     // Use this for initialization
     void Start()
     {

@@ -38,5 +38,6 @@ public class SpaceshipScript : MonoBehaviour {
         SceneManager.LoadScene("GameOver");
         GameObject.Destroy(gameObject);
         ScoreManager.score = 0;
+        astroidFactory.score = 0;
     }
 }
